@@ -1,3 +1,9 @@
+.site-nav a,.submenu-toggle{--primary-color: var(--brand);--primary-hover: var(--brand-2)}
+.site-nav a{color:var(--text);text-decoration:none;font-weight:700;padding:.5rem .75rem;border-radius:8px;position:relative}
+.site-nav a::after{content:"";position:absolute;left:.6rem;right:.6rem;bottom:.35rem;height:2px;background:linear-gradient(90deg,var(--primary-color),var(--primary-hover));transform:scaleX(0);transform-origin:left;transition:transform .2s ease}
+.site-nav a:hover::after{transform:scaleX(1)}
+.site-nav a:focus-visible{outline:3px solid color-mix(in srgb, var(--accent) 60%, transparent);outline-offset:2px}
+
 /* Header-specific overrides for robust Services dropdown */
 
 /* Containment and stacking */
