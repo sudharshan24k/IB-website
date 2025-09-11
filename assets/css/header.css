@@ -1,0 +1,35 @@
+/* Header-specific overrides for robust Services dropdown */
+
+/* Containment and stacking */
+.site-header{position:sticky;top:0;z-index:1000}
+.site-nav{position:relative}
+.site-nav ul{position:relative}
+.site-nav .has-submenu{position:relative}
+
+/* Toggle button */
+.submenu-toggle{display:inline-flex;align-items:center;gap:.4rem;font:inherit}
+.submenu-toggle:after{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);display:inline-block;margin-left:.2rem;transition:transform .2s ease}
+.has-submenu.open > .submenu-toggle:after{transform:rotate(-135deg)}
+
+/* Panel */
+.submenu{position:absolute;inset:auto auto auto 0;top:calc(100% + 10px);min-width:560px;max-width:840px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow-lg);padding:10px;display:none;
+  grid-template-columns:repeat(3,minmax(160px,1fr));gap:6px;white-space:normal}
+.submenu a{display:block;padding:.9rem 1rem;border-radius:10px;font-weight:700;line-height:1.2}
+.submenu a:hover{background:var(--surface)}
+.has-submenu.open > .submenu{display:grid}
+.has-submenu:hover > .submenu{display:grid}
+.has-submenu:focus-within > .submenu{display:grid}
+
+/* Animation */
+.submenu{opacity:0;transform:translateY(6px);transition:opacity .18s ease, transform .18s ease}
+.has-submenu.open > .submenu,.has-submenu:hover > .submenu,.has-submenu:focus-within > .submenu{opacity:1;transform:none}
+
+/* Make sure it sits above hero elements */
+.submenu{z-index:1200}
+
+/* Mobile behavior */
+@media (max-width: 720px){
+  .submenu{position:static;min-width:0;max-width:none;border-radius:12px;box-shadow:var(--shadow);grid-template-columns:1fr;opacity:1;transform:none}
+}
+
+
