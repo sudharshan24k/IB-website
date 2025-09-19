@@ -1,3 +1,68 @@
+// Contact form submission handler
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData.entries());
+      // TODO: Replace with your actual API endpoint
+      const apiEndpoint = 'https://your-api-endpoint.com/send-email';
+      try {
+        const res = await fetch(apiEndpoint, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          alert('Thank you! Your message has been sent.');
+          form.reset();
+        } else {
+          alert('Sorry, there was a problem sending your message.');
+        }
+      } catch (err) {
+        alert('Network error. Please try again later.');
+      }
+    });
+  }
+});
+  // Page transition overlay
+  function createPageTransitionOverlay() {
+    if (document.querySelector('.page-transition-overlay')) return;
+    const overlay = document.createElement('div');
+    overlay.className = 'page-transition-overlay';
+    document.body.appendChild(overlay);
+    return overlay;
+  }
+
+  function triggerPageTransition(href) {
+    const overlay = createPageTransitionOverlay() || document.querySelector('.page-transition-overlay');
+    overlay.classList.add('active');
+    setTimeout(() => {
+      window.location.href = href;
+    }, 420);
+  }
+
+  // Intercept all internal nav links for transition
+  document.addEventListener('DOMContentLoaded', () => {
+    createPageTransitionOverlay();
+    document.body.addEventListener('click', function(e) {
+      const a = e.target.closest('a');
+      if (!a) return;
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('#') || a.target === '_blank' || a.hasAttribute('download') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+      // Only animate for same-origin links
+      const url = new URL(href, window.location.origin);
+      if (url.origin !== window.location.origin) return;
+      e.preventDefault();
+      triggerPageTransition(href);
+    }, true);
+    // On page load, fade out overlay if present
+    const overlay = document.querySelector('.page-transition-overlay');
+    if (overlay) {
+      overlay.classList.remove('active');
+    }
+  });
 (() => {
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
