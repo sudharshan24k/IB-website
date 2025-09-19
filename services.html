@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - IB Excellence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-sky-50 via-white to-sky-50 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <!-- Company Name -->
+            <div class="text-center mb-4">
+                <a href="index.html" class="inline-flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center mb-2">
+                        <span class="text-2xl font-bold text-white">EG</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-sky-800 tracking-wide">Edura Global Solutions</h1>
+                </a>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="flex flex-col md:flex-row items-center justify-center">
+                <div class="hidden md:flex items-center justify-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Products
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="services.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition-all relative group">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Process
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="contact.html" class="ml-2 px-6 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+                        Contact
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden absolute right-4 top-8 text-sky-800 hover:text-sky-600 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu (Hidden by default) -->
+                <div class="md:hidden w-full">
+                    <div class="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg rounded-b-2xl mt-0.5 p-4 hidden opacity-0 transition-opacity duration-300">
+                        <div class="flex flex-col space-y-2">
+                            <a href="index.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Home</a>
+                            <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">About</a>
+                            <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Products</a>
+                            <a href="services.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg hover:bg-sky-50 transition-colors">Services</a>
+                            <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Process</a>
+                            <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Resources</a>
+                            <a href="contact.html" class="px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-sky-100 via-white to-sky-50 opacity-70"></div>
+        <div class="relative container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-sky-800 mb-6">
+                    Comprehensive Educational Services
+                </h1>
+                <p class="text-lg text-sky-600 max-w-2xl mx-auto">
+                    Transform your educational institution with our expert consulting and support services designed to enhance academic excellence.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16">
+        <!-- Service 1: Strategic Consulting -->
+        <div class="container mx-auto px-4 mb-24">
+            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-sky-50 to-sky-100">
+                        <div class="w-20 h-20 bg-gradient-to-br from-sky-400 to-sky-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-sky-800 mb-6">Strategic Consulting</h2>
+                        <p class="text-sky-600 mb-8 text-lg">Expert guidance to optimize your institution's academic performance and operational efficiency.</p>
+                        <ul class="space-y-4 text-sky-700">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Institutional Assessment
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Performance Optimization
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Strategic Planning
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 p-12 lg:p-16">
+                        <div class="h-full flex flex-col justify-between">
+                            <div class="prose prose-sky">
+                                <h3 class="text-xl font-semibold text-sky-800 mb-4">How We Help</h3>
+                                <p class="text-gray-600 mb-6">Our strategic consulting service provides comprehensive support to help your institution achieve excellence in education. We work closely with your team to identify opportunities, overcome challenges, and implement effective solutions.</p>
+                                <h3 class="text-xl font-semibold text-sky-800 mb-4">Benefits</h3>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li>• Enhanced institutional performance</li>
+                                    <li>• Improved student outcomes</li>
+                                    <li>• Optimized resource utilization</li>
+                                    <li>• Clear roadmap for growth</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
+                                Learn More
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2: Professional Development -->
+        <div class="container mx-auto px-4 mb-24">
+            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="flex flex-col lg:flex-row-reverse">
+                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-blue-50 to-blue-100">
+                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-blue-800 mb-6">Professional Development</h2>
+                        <p class="text-blue-600 mb-8 text-lg">Comprehensive training programs for educators and administrators.</p>
+                        <ul class="space-y-4 text-blue-700">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Teacher Training
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Leadership Development
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Curriculum Training
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 p-12 lg:p-16">
+                        <div class="h-full flex flex-col justify-between">
+                            <div class="prose prose-blue">
+                                <h3 class="text-xl font-semibold text-blue-800 mb-4">How We Help</h3>
+                                <p class="text-gray-600 mb-6">Our professional development programs enhance the skills and knowledge of your educational staff, ensuring they stay at the forefront of educational best practices.</p>
+                                <h3 class="text-xl font-semibold text-blue-800 mb-4">Benefits</h3>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li>• Enhanced teaching effectiveness</li>
+                                    <li>• Updated pedagogical practices</li>
+                                    <li>• Improved student engagement</li>
+                                    <li>• Professional growth opportunities</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
+                                Learn More
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3: Curriculum Support -->
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-indigo-50 to-indigo-100">
+                        <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-indigo-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
+                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                            </svg>
+                        </div>
+                        <h2 class="text-3xl font-bold text-indigo-800 mb-6">Curriculum Support</h2>
+                        <p class="text-indigo-600 mb-8 text-lg">Expert guidance for curriculum development and implementation.</p>
+                        <ul class="space-y-4 text-indigo-700">
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Curriculum Design
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Resource Development
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
+                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                    </svg>
+                                </span>
+                                Assessment Planning
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="lg:w-1/2 p-12 lg:p-16">
+                        <div class="h-full flex flex-col justify-between">
+                            <div class="prose prose-indigo">
+                                <h3 class="text-xl font-semibold text-indigo-800 mb-4">How We Help</h3>
+                                <p class="text-gray-600 mb-6">We provide comprehensive assistance in developing and implementing educational curriculum that meets international standards and drives student success.</p>
+                                <h3 class="text-xl font-semibold text-indigo-800 mb-4">Benefits</h3>
+                                <ul class="space-y-3 text-gray-600">
+                                    <li>• Aligned with IB standards</li>
+                                    <li>• Customized learning materials</li>
+                                    <li>• Effective assessment strategies</li>
+                                    <li>• Continuous support and updates</li>
+                                </ul>
+                            </div>
+                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
+                                Learn More
+                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-gradient-to-br from-sky-50 to-sky-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-sky-800 mb-6">Ready to Elevate Your Institution?</h2>
+                <p class="text-lg text-sky-600 mb-8">
+                    Let's discuss how our services can help you achieve educational excellence.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                        Schedule Consultation
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-white text-sky-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 border-2 border-sky-100">
+                        Download Brochure
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+        <li><a href="about.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">About Us</a></li>
+        <li><a href="products.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Products</a></li>
+        <li><a href="services.html" class="text-sky-700 border-b-2 border-sky-400 pb-1 transition-all">Services</a></li>
+        <li><a href="process.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Process</a></li>
+        <li><a href="resources.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Resources</a></li>
+        <li><a href="contact.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Services Hero Section -->
+  <section class="relative py-20 bg-gradient-to-br from-sky-100 via-blue-50 to-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-bold text-sky-800 mb-6">Our Services</h1>
+        <p class="text-xl text-sky-700 leading-relaxed">Comprehensive educational consulting services tailored to your institution's unique needs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="container mx-auto py-16 px-4">
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Authorization & Accreditation -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
+        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-sky-800 mb-4">Authorization & Accreditation Support</h3>
+        <p class="text-sky-600 mb-4">End-to-end guidance for international school accreditation and authorization.</p>
+        <ul class="space-y-2 text-sky-700 text-sm">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Application guidance
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Documentation support
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Process management
+          </li>
+        </ul>
+      </div>
+
+      <!-- Staff Hiring -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
+        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-sky-800 mb-4">Staff Hiring</h3>
+        <p class="text-sky-600 mb-4">Recruitment, vetting, and placement of qualified teachers and administrators.</p>
+        <ul class="space-y-2 text-sky-700 text-sm">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Global talent search
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Background verification
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Placement assistance
+          </li>
+        </ul>
+      </div>
+
+      <!-- School Improvement -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
+        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
+          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-bold text-sky-800 mb-4">School Improvement & Development</h3>
+        <p class="text-sky-600 mb-4">Strategic planning, curriculum development, and operational consulting for school growth.</p>
+        <ul class="space-y-2 text-sky-700 text-sm">
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Strategic planning
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Curriculum development
+          </li>
+          <li class="flex items-center">
+            <svg class="w-4 h-4 text-sky-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+            </svg>
+            Operational excellence
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Custom Solutions -->
+    <div class="mt-16 bg-white rounded-2xl shadow-lg p-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-2xl font-bold text-sky-800 mb-4">Tailored Solutions</h2>
+        <p class="text-sky-700 leading-relaxed">We tailor our services to meet the unique needs of each institution, ensuring sustainable success and compliance with global standards.</p>
+        <a href="contact.html" class="inline-block bg-sky-600 text-white px-8 py-3 rounded-lg hover:bg-sky-700 transition-colors font-semibold mt-6">Discuss Your Needs</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-sky-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-500 rounded-lg flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">IB</span>
+                        </div>
+                        <span class="text-2xl font-bold">Excellence</span>
+                    </div>
+                    <p class="text-sky-200 mb-4 max-w-md">Empowering educational institutions with innovative solutions for excellence in teaching and learning.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sky-200 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-sky-200 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="services.html" class="text-sky-200 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-sky-200 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-sky-800 mt-8 pt-8 text-center md:text-left">
+                <p class="text-sky-200">&copy; 2023 IB Excellence. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:hidden .absolute');
+            
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.toggle('opacity-0');
+                }, 10);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,194 +1,387 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edura Global Solutions | Staffing • Authorization • Improvement</title>
-    <meta name="description" content="Edura Global Solutions: specialized services for international schools in India—staff hiring for IB/Cambridge, authorization & accreditation support (IB, Cambridge, CIS, NEASC, WASC), and school improvement & development plans.">
-    <meta name="theme-color" content="#0b3b5a">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/header.css">
-  </head>
-  <body>
-    <a class="skip-link" href="#main">Skip to content</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IB Excellence - Educational Consulting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        .bg-gradient-overlay::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(59, 130, 246, 0.2));
+            z-index: -1;
+            border-radius: inherit;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-sky-50 via-white to-sky-50 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <!-- Company Name -->
+            <div class="text-center mb-4">
+                <a href="index.html" class="inline-flex flex-col items-center">
+                    <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center mb-2">
+                        <span class="text-2xl font-bold text-white">EG</span>
+                    </div>
+                    <h1 class="text-3xl font-bold text-sky-800 tracking-wide">Edura Global Solutions</h1>
+                </a>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="flex flex-col md:flex-row items-center justify-center">
+                <div class="hidden md:flex items-center justify-center space-x-1">
+                    <a href="index.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition-all relative group">
+                        Home
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        About
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Products
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="services.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Services
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Process
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">
+                        Resources
+                        <span class="absolute bottom-0 left-0 w-full h-0.5 bg-sky-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+                    </a>
+                    <a href="contact.html" class="ml-2 px-6 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all">
+                        Contact
+                    </a>
+                </div>
 
-    <header class="site-header modern-header">
-      <div class="header-inner modern-header-inner">
-        <a href="/index.html#home" class="company-title" aria-label="Edura Global Services home" style="display: flex; align-items: center; gap: 0.7rem; justify-content: center;">
-          <span style="display:inline-flex;align-items:center;">
-            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><circle cx="19" cy="19" r="19" fill="#1b6ea7"/><text x="50%" y="54%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial, sans-serif" font-weight="bold" dy=".3em">EG</text></svg>
-          </span>
-          Edura Global Services
-        </a>
-        <nav class="modern-nav" aria-label="Primary navigation">
-          <ul>
-            <li><a href="/pages/about.html">About Us</a></li>
-            <li><a href="/index.html#products">Products</a></li>
-            <li><a href="/pages/services.html#what-we-do">Services</a></li>
-            <li><a href="/index.html#process">Process</a></li>
-            <li><a href="/pages/resources.html">Resources</a></li>
-            <li><a href="/pages/faq.html">FAQ</a></li>
-            <li><a href="/pages/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden absolute right-4 top-8 text-sky-800 hover:text-sky-600 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                    </svg>
+                </button>
+
+                <!-- Mobile Menu (Hidden by default) -->
+                <div class="md:hidden w-full">
+                    <div class="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md shadow-lg rounded-b-2xl mt-0.5 p-4 hidden opacity-0 transition-opacity duration-300">
+                        <div class="flex flex-col space-y-2">
+                            <a href="index.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg hover:bg-sky-50 transition-colors">Home</a>
+                            <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">About</a>
+                            <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Products</a>
+                            <a href="services.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Services</a>
+                            <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Process</a>
+                            <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Resources</a>
+                            <a href="contact.html" class="px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
 
-    <main id="main">
-      <!-- Hero -->
-      <section id="home" class="section hero reveal">
-        <div class="container grid-2">
-          <div class="hero-copy">
-            <h1>Specialists for International Schools in India</h1>
-            <p class="lead">Staff hiring for IB/Cambridge, end‑to‑end authorization & accreditation support, and comprehensive school improvement & development plans.</p>
-            <div class="hero-ctas">
-              <a href="#services" class="btn btn-primary">Explore Services</a>
-              <a href="/pages/contact.html" class="btn btn-ghost">Get in Touch</a>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-blue-50"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-bl-[200px]"></div>
+        <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-sky-400/10 to-transparent rounded-tr-[200px]"></div>
+        
+        <!-- Floating Elements -->
+        <div class="absolute top-20 right-20 w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full animate-float"></div>
+        <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-sky-400/20 to-blue-600/20 rounded-full animate-float" style="animation-delay: -1.5s"></div>
+        
+        <!-- Content -->
+        <div class="relative container mx-auto px-4 py-20 lg:py-32">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <!-- Text Content -->
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-block px-4 py-2 bg-sky-100 rounded-full text-sky-600 font-semibold mb-6 animate-float">
+                        Welcome to Excellence in Education
+                    </div>
+                    <h1 class="text-4xl lg:text-6xl font-bold text-sky-900 mb-6 leading-tight">
+                        Transforming Education for 
+                        <span class="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">Tomorrow's Leaders</span>
+                    </h1>
+                    <p class="text-lg text-sky-700 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Partner with us to revolutionize your educational institution. We provide comprehensive solutions for academic excellence, innovative learning, and institutional growth.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-0.5 transition-all text-center">
+                            Get Started
+                        </a>
+                        <a href="about.html" class="w-full sm:w-auto px-8 py-4 border-2 border-sky-500 text-sky-600 font-semibold rounded-xl hover:bg-sky-50 transition-all text-center">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Image/Illustration -->
+                <div class="flex-1 relative">
+                    <div class="relative w-full aspect-square max-w-lg mx-auto">
+                        <div class="absolute inset-0 bg-gradient-to-br from-sky-200/50 to-blue-300/50 rounded-2xl transform rotate-3"></div>
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Educational Excellence" class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                    </div>
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full opacity-75 animate-float"></div>
+                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400/30 to-emerald-600/30 rounded-full opacity-75 animate-float" style="animation-delay: -0.5s"></div>
+                </div>
             </div>
-          </div>
-          <div class="hero-art" aria-hidden="true">
-            <div class="card kpi">
-              <div class="kpi-row"><span>IB / Cambridge</span><strong>Expert Hiring</strong></div>
-              <div class="kpi-row"><span>Accreditation</span><strong>IB • CIS • NEASC • WASC</strong></div>
-              <div class="kpi-row"><span>School Plans</span><strong>Concept → Compliance → Launch</strong></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-20 bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden">
+        <!-- Section Header -->
+        <div class="container mx-auto px-4 mb-16">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl lg:text-4xl font-bold text-sky-900 mb-4">
+                    Why Choose Edura Global?
+                </h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-sky-700">
+                    Discover how we're revolutionizing education through innovation, expertise, and dedication to excellence.
+                </p>
             </div>
-          </div>
         </div>
-      </section>
 
-      <!-- Products -->
-      <section id="products" class="section alt reveal">
-        <div class="container">
-          <header class="section-header">
-            <h2>Products</h2>
-            <p>Three focused offerings tailored for international schools in India.</p>
-          </header>
-          <div class="cards grid-3">
-            <a class="card service link-card reveal delay-1" href="/pages/hiring.html">
-              <h3>Staff Hiring Services</h3>
-              <p>End‑to‑end recruitment for IB/Cambridge schools—leaders, coordinators, teachers.</p>
-              <span class="link-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="card service link-card reveal delay-2" href="/pages/authorization.html">
-              <h3>Authorization & Accreditation</h3>
-              <p>IB, Cambridge, CIS, NEASC, WASC readiness: gaps, evidence, policies, mock visits.</p>
-              <span class="link-arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="card service link-card reveal delay-3" href="/pages/improvement.html">
-              <h3>School Improvement & Development</h3>
-              <p>Concept to launch: clearances, NOC, infrastructure, QA, and continuous improvement.</p>
-              <span class="link-arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
+        <!-- Features Grid -->
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-overlay relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-sky-900 mb-4">Expert Guidance</h3>
+                    <p class="text-sky-700 leading-relaxed mb-4">
+                        Our team brings decades of experience in international education and institutional development.
+                    </p>
+                    <a href="about.html" class="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors">
+                        Learn More
+                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-overlay relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-pink-600 rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-sky-900 mb-4">Innovative Solutions</h3>
+                    <p class="text-sky-700 leading-relaxed mb-4">
+                        Cutting-edge educational tools and methodologies designed for modern learning environments.
+                    </p>
+                    <a href="products.html" class="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors">
+                        Explore Products
+                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-overlay relative overflow-hidden">
+                    <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-600 rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-sky-900 mb-4">Proven Results</h3>
+                    <p class="text-sky-700 leading-relaxed mb-4">
+                        Track record of success in elevating educational standards and institutional performance.
+                    </p>
+                    <a href="process.html" class="inline-flex items-center text-sky-600 font-semibold hover:text-sky-700 transition-colors">
+                        View Process
+                        <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Services -->
-      <section id="services" class="section reveal">
-        <div class="container">
-          <header class="section-header">
-            <h2>What we do</h2>
-            <p>Three focused offerings for international schools and educators in India.</p>
-          </header>
-
-          <div class="cards grid-3">
-            <article class="card service">
-              <h3>Staff Hiring for International Schools</h3>
-              <p>Full‑cycle recruitment for IB and Cambridge schools in India—leadership, coordinators, subject teachers, and support staff. Rigorous vetting aligned to international standards.</p>
-              <ul class="checklist">
-                <li>Role definition and scorecards</li>
-                <li>Sourcing, screening, and demo class reviews</li>
-                <li>Background checks and reference verification</li>
-                <li>Offer management and onboarding support</li>
-              </ul>
-            </article>
-
-            <article class="card service">
-              <h3>Authorization & Accreditation Support</h3>
-              <p>Hands‑on guidance to achieve and maintain recognition from IB, Cambridge, CIS, NEASC, and WASC—documentation, readiness audits, and visit preparation.</p>
-              <ul class="checklist">
-                <li>Gap analysis against frameworks</li>
-                <li>Policy and handbook development</li>
-                <li>Evidence gathering and action planning</li>
-                <li>Mock visits and team coaching</li>
-              </ul>
-            </article>
-
-            <article class="card service">
-              <h3>School Improvement & Development Plans</h3>
-              <p>End‑to‑end planning from concept to launch: approvals, NOC, infrastructure readiness, and continuous improvement roadmaps tailored to international benchmarks.</p>
-              <ul class="checklist">
-                <li>Project planning and regulatory clearances</li>
-                <li>Curriculum and staffing models</li>
-                <li>Quality assurance and PD frameworks</li>
-                <li>Operational SOPs and governance</li>
-              </ul>
-            </article>
-          </div>
+    <!-- CTA Section -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-sky-900 to-blue-900"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1')] bg-cover bg-center opacity-10"></div>
+        <div class="relative container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">
+                    Ready to Transform Your Institution?
+                </h2>
+                <p class="text-lg text-sky-200 mb-8 max-w-2xl mx-auto">
+                    Join the leading educational institutions that have partnered with us to achieve academic excellence and institutional growth.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-white text-sky-900 font-semibold rounded-xl hover:bg-sky-50 transition-all text-center">
+                        Schedule a Consultation
+                    </a>
+                    <a href="resources.html" class="w-full sm:w-auto px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-center">
+                        Browse Resources
+                    </a>
+                </div>
+            </div>
         </div>
-      </section>
+    </section>
 
-      <!-- Process Timeline -->
-      <section id="process" class="section alt reveal">
-        <div class="container">
-          <header class="section-header">
-            <h2>How we work</h2>
-            <p>Transparent, collaborative, and outcome‑driven engagements.</p>
-          </header>
-          <ol class="timeline">
-            <li>
-              <div class="step">
-                <h4>Discovery</h4>
-                <p>Needs assessment and scope definition with all stakeholders.</p>
-              </div>
-            </li>
-            <li>
-              <div class="step">
-                <h4>Blueprint</h4>
-                <p>Roadmap, milestones, and quality metrics aligned to IB/Cambridge.</p>
-              </div>
-            </li>
-            <li>
-              <div class="step">
-                <h4>Implementation</h4>
-                <p>Recruitment, documentation, training, and operational setup.</p>
-              </div>
-            </li>
-            <li>
-              <div class="step">
-                <h4>Review & Readiness</h4>
-                <p>Internal audits, mock visits, and final readiness checks.</p>
-              </div>
-            </li>
-          </ol>
+    <!-- Footer Section -->
+    <footer class="bg-sky-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-500 rounded-lg flex items-center justify-center">
+                            <span class="text-xl font-bold text-white">EG</span>
+                        </div>
+                        <span class="text-2xl font-bold">Edura Global Solutions</span>
+                    </div>
+                    <p class="text-sky-200 mb-4 max-w-md">
+                        Empowering educational institutions with innovative solutions for excellence in teaching and learning.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="about.html" class="text-sky-200 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="products.html" class="text-sky-200 hover:text-white transition-colors">Products</a></li>
+                        <li><a href="services.html" class="text-sky-200 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="text-sky-200 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-sky-800 mt-8 pt-8 text-center md:text-left">
+                <p class="text-sky-200">&copy; 2025 Edura Global Solutions. All rights reserved.</p>
+            </div>
         </div>
-      </section>
-
-      
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-inner">
-        <p>© <span id="year"></span> Edura Global Solutions</p>
-        <nav aria-label="Footer">
-          <a href="/index.html#products">Products</a>
-          <a href="/index.html#services">Services</a>
-          <a href="/index.html#process">Process</a>
-          <a href="/pages/faq.html">FAQ</a>
-          <a href="/pages/contact.html" class="footer-contact-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5"/><polyline points="16 17 21 17 21 22"/><line x1="21" y1="17" x2="10" y2="6"/></svg>
-            Contact Us
-          </a>
-        </nav>
-      </div>
     </footer>
 
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            const mobileMenu = document.querySelector('.md\\:hidden .absolute');
+            const mobileMenuLinks = document.querySelectorAll('.md\\:hidden .absolute a');
+            let isOpen = false;
+            
+            function toggleMenu() {
+                isOpen = !isOpen;
+                mobileMenu.classList.toggle('hidden');
+                setTimeout(() => {
+                    mobileMenu.classList.toggle('opacity-0');
+                }, 10);
 
-  </body>
-  </html>
+                // Update button ARIA attributes
+                mobileMenuButton.setAttribute('aria-expanded', isOpen);
+                
+                // Prevent scrolling when menu is open
+                document.body.style.overflow = isOpen ? 'hidden' : '';
+            }
 
+            // Set up initial ARIA attributes
+            mobileMenuButton.setAttribute('aria-label', 'Toggle navigation menu');
+            mobileMenuButton.setAttribute('aria-controls', 'mobile-menu');
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenu.setAttribute('id', 'mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', toggleMenu);
 
+            // Close menu when clicking a link
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (isOpen) toggleMenu();
+                });
+            });
+
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && isOpen) toggleMenu();
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                const isClickInside = mobileMenu.contains(e.target) || mobileMenuButton.contains(e.target);
+                if (!isClickInside && isOpen) toggleMenu();
+            });
+
+            // Handle resize events
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768 && isOpen) { // 768px is the 'md' breakpoint in Tailwind
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Add smooth scroll behavior for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').slice(1);
+                if (targetId) {
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections for fade-in effect
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
