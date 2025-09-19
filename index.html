@@ -16,7 +16,27 @@
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="site-header"></div>
+    <header class="site-header modern-header">
+      <div class="header-inner modern-header-inner">
+        <a href="/index.html#home" class="company-title" aria-label="Edura Global Services home" style="display: flex; align-items: center; gap: 0.7rem; justify-content: center;">
+          <span style="display:inline-flex;align-items:center;">
+            <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;"><circle cx="19" cy="19" r="19" fill="#1b6ea7"/><text x="50%" y="54%" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial, sans-serif" font-weight="bold" dy=".3em">EG</text></svg>
+          </span>
+          Edura Global Services
+        </a>
+        <nav class="modern-nav" aria-label="Primary navigation">
+          <ul>
+            <li><a href="/pages/about.html">About Us</a></li>
+            <li><a href="/index.html#products">Products</a></li>
+            <li><a href="/pages/services.html#what-we-do">Services</a></li>
+            <li><a href="/index.html#process">Process</a></li>
+            <li><a href="/pages/resources.html">Resources</a></li>
+            <li><a href="/pages/faq.html">FAQ</a></li>
+            <li><a href="/pages/contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <main id="main">
       <!-- Hero -->
@@ -151,7 +171,21 @@
       
     </main>
 
-    <div id="site-footer"></div>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> Edura Global Solutions</p>
+        <nav aria-label="Footer">
+          <a href="/index.html#products">Products</a>
+          <a href="/index.html#services">Services</a>
+          <a href="/index.html#process">Process</a>
+          <a href="/pages/faq.html">FAQ</a>
+          <a href="/pages/contact.html" class="footer-contact-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7.5"/><polyline points="16 17 21 17 21 22"/><line x1="21" y1="17" x2="10" y2="6"/></svg>
+            Contact Us
+          </a>
+        </nav>
+      </div>
+    </footer>
 
   <script defer src="assets/js/script.js"></script>
   </body>
