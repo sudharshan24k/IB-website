@@ -1,154 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources | Edura Global Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Poppins', 'Inter', 'sans-serif'; }
-  </style>
-</head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edura Global Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Poppins', 'Inter', 'sans-serif'; }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({ duration: 900, once: true });
+      });
+    </script>
+  </head>
 <body class="bg-gradient-to-br from-sky-50 via-blue-100 to-blue-50 min-h-screen flex flex-col">
-  <!-- Header / Navbar -->
-  <header class="sticky top-0 z-30 bg-white/80 backdrop-blur shadow-sm">
-    <nav class="container mx-auto flex items-center justify-between py-3 px-4">
-      <div class="text-2xl font-bold text-sky-700 tracking-wide">Edura Global Solutions</div>
-      <ul class="flex space-x-6 text-base font-medium">
-        <li><a href="index.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Home</a></li>
-        <li><a href="about.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">About Us</a></li>
-        <li><a href="products.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Products</a></li>
-        <li><a href="services.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Services</a></li>
-        <li><a href="process.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Process</a></li>
-        <li><a href="resources.html" class="text-sky-700 border-b-2 border-sky-400 pb-1 transition-all">Resources</a></li>
-        <li><a href="contact.html" class="hover:text-sky-600 hover:border-b-2 hover:border-sky-400 pb-1 transition-all">Contact</a></li>
-      </ul>
-    </nav>
+  <!-- Global Header -->
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-6">
+      <div class="text-center mb-4">
+        <a href="index.html" class="inline-flex flex-col items-center">
+          <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center mb-2">
+            <span class="text-2xl font-bold text-white">EG</span>
+          </div>
+          <h1 class="text-3xl font-bold text-sky-800 tracking-wide">Edura Global Solutions</h1>
+        </a>
+      </div>
+      <nav class="flex flex-col md:flex-row items-center justify-center">
+        <div class="hidden md:flex items-center justify-center space-x-1">
+          <a href="index.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg hover:bg-sky-50 hover:text-sky-600 transition-all relative group">Home</a>
+          <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">About</a>
+          <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Products</a>
+          <a href="services.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Services</a>
+          <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Process</a>
+          <a href="resources.html" class="px-4 py-2 text-sky-800 font-semibold rounded-lg bg-sky-100 border-b-2 border-sky-400">Resources</a>
+          <a href="contact.html" class="ml-2 px-6 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all">Contact</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <!-- Resources Hero Section -->
-  <section class="relative py-20 bg-gradient-to-br from-sky-100 via-blue-50 to-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <h1 class="text-4xl md:text-5xl font-bold text-sky-800 mb-6">Educational Resources</h1>
-        <p class="text-xl text-sky-700 leading-relaxed">Access valuable tools and insights to support your institution's growth and success.</p>
+  <section class="relative py-20 bg-gradient-to-br from-sky-200 via-sky-100 to-blue-100 overflow-hidden">
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-br from-sky-400/30 to-blue-300/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-gradient-to-tr from-pink-300/20 to-sky-200/30 rounded-full blur-3xl animate-pulse"></div>
+    <div class="container mx-auto px-4 relative">
+      <div class="max-w-3xl mx-auto text-center" data-aos="fade-down">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-sky-800 mb-6 tracking-tight drop-shadow-lg">Extraordinary Resources</h1>
+        <p class="text-2xl text-sky-700 leading-relaxed mb-2">Unlock tools, guides, and inspiration for educational excellence.</p>
+        <span class="inline-block mt-4 px-6 py-2 bg-gradient-to-r from-sky-400 to-blue-500 text-white font-semibold rounded-full shadow-lg animate-bounce">Curated for You</span>
       </div>
     </div>
   </section>
 
   <!-- Resources Grid -->
   <section class="container mx-auto py-16 px-4">
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Guides & Whitepapers -->
-      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
-        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div class="grid md:grid-cols-3 gap-10">
+      <!-- Card 1 -->
+      <div class="group bg-gradient-to-br from-sky-100 via-blue-50 to-white rounded-3xl shadow-2xl p-8 border-2 border-sky-200 hover:scale-105 hover:shadow-3xl transition-all duration-500 relative overflow-hidden" data-aos="zoom-in">
+        <div class="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-sky-300/40 to-blue-400/20 rounded-full blur-2xl"></div>
+        <div class="w-16 h-16 bg-gradient-to-br from-sky-400 to-blue-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-sky-800 mb-4">Guides & Whitepapers</h3>
-        <p class="text-sky-600 mb-6">Downloadable resources on accreditation, school improvement, and best practices.</p>
-        <div class="space-y-4">
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">Accreditation Guide</h4>
-            <p class="text-sky-600 text-sm mt-1">Comprehensive guide to international accreditation process</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Download PDF
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-              </svg>
-            </span>
-          </a>
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">Best Practices Whitepaper</h4>
-            <p class="text-sky-600 text-sm mt-1">Latest trends and practices in international education</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Download PDF
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-              </svg>
-            </span>
-          </a>
-        </div>
+        <h3 class="text-2xl font-bold text-sky-800 mb-2">Guides & Whitepapers</h3>
+        <p class="text-sky-700 mb-4">Downloadable resources on accreditation, school improvement, and best practices.</p>
+        <a href="#" class="inline-block mt-2 px-5 py-2 bg-gradient-to-r from-sky-400 to-blue-500 text-white font-semibold rounded-full shadow hover:from-blue-500 hover:to-sky-400 transition-all">Download</a>
       </div>
-
-      <!-- Case Studies -->
-      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
-        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Card 2 -->
+      <div class="group bg-gradient-to-br from-pink-100 via-fuchsia-50 to-white rounded-3xl shadow-2xl p-8 border-2 border-pink-200 hover:scale-105 hover:shadow-3xl transition-all duration-500 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+        <div class="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-pink-300/40 to-fuchsia-400/20 rounded-full blur-2xl"></div>
+        <div class="w-16 h-16 bg-gradient-to-br from-pink-400 to-fuchsia-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-sky-800 mb-4">Case Studies</h3>
-        <p class="text-sky-600 mb-6">Success stories from partner schools and institutions.</p>
-        <div class="space-y-4">
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">International School Success</h4>
-            <p class="text-sky-600 text-sm mt-1">How we helped achieve accreditation in 6 months</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Read More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </a>
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">Curriculum Transformation</h4>
-            <p class="text-sky-600 text-sm mt-1">Modernizing education delivery for better outcomes</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Read More
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-              </svg>
-            </span>
-          </a>
-        </div>
+        <h3 class="text-2xl font-bold text-pink-800 mb-2">Case Studies</h3>
+        <p class="text-pink-700 mb-4">Success stories from partner schools and institutions.</p>
+        <a href="#" class="inline-block mt-2 px-5 py-2 bg-gradient-to-r from-pink-400 to-fuchsia-500 text-white font-semibold rounded-full shadow hover:from-fuchsia-500 hover:to-pink-400 transition-all">Read More</a>
       </div>
-
-      <!-- Useful Links -->
-      <div class="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-all">
-        <div class="w-16 h-16 bg-sky-100 rounded-lg flex items-center justify-center mb-6">
-          <svg class="w-8 h-8 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <!-- Card 3 -->
+      <div class="group bg-gradient-to-br from-emerald-100 via-green-50 to-white rounded-3xl shadow-2xl p-8 border-2 border-emerald-200 hover:scale-105 hover:shadow-3xl transition-all duration-500 relative overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+        <div class="absolute -top-8 -right-8 w-24 h-24 bg-gradient-to-br from-emerald-300/40 to-green-400/20 rounded-full blur-2xl"></div>
+        <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-green-500 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
           </svg>
         </div>
-        <h3 class="text-xl font-bold text-sky-800 mb-4">Useful Links</h3>
-        <p class="text-sky-600 mb-6">Access to international education organizations and accreditation bodies.</p>
-        <div class="space-y-4">
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">International Organizations</h4>
-            <p class="text-sky-600 text-sm mt-1">Directory of key educational bodies worldwide</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Visit Directory
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-              </svg>
-            </span>
-          </a>
-          <a href="#" class="block bg-sky-50 rounded-lg p-4 hover:bg-sky-100 transition-colors">
-            <h4 class="font-semibold text-sky-700">Accreditation Resources</h4>
-            <p class="text-sky-600 text-sm mt-1">Links to major accreditation bodies</p>
-            <span class="text-sky-500 text-sm mt-2 flex items-center">
-              Visit Resources
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-              </svg>
-            </span>
-          </a>
-        </div>
+        <h3 class="text-2xl font-bold text-emerald-800 mb-2">Useful Links</h3>
+        <p class="text-emerald-700 mb-4">Access to international education organizations and accreditation bodies.</p>
+        <a href="#" class="inline-block mt-2 px-5 py-2 bg-gradient-to-r from-emerald-400 to-green-500 text-white font-semibold rounded-full shadow hover:from-green-500 hover:to-emerald-400 transition-all">Visit</a>
       </div>
     </div>
-
     <!-- Newsletter Signup -->
-    <div class="mt-16 bg-white rounded-2xl shadow-lg p-8 max-w-4xl mx-auto">
+    <div class="mt-20 bg-gradient-to-br from-sky-100 via-blue-50 to-white rounded-3xl shadow-2xl p-10 max-w-3xl mx-auto border-2 border-sky-200" data-aos="fade-up">
       <div class="text-center">
-        <h2 class="text-2xl font-bold text-sky-800 mb-4">Stay Updated</h2>
+        <h2 class="text-3xl font-bold text-sky-800 mb-4">Stay Updated</h2>
         <p class="text-sky-700 leading-relaxed mb-6">Subscribe to our newsletter for regular updates on new resources and educational insights.</p>
         <form class="max-w-md mx-auto flex gap-4">
           <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-2 rounded-lg border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500">
-          <button type="submit" class="bg-sky-600 text-white px-6 py-2 rounded-lg hover:bg-sky-700 transition-colors font-semibold">Subscribe</button>
+          <button type="submit" class="bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-2 rounded-lg hover:from-blue-600 hover:to-sky-500 transition-all font-semibold shadow-lg">Subscribe</button>
         </form>
       </div>
     </div>

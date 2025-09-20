@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edura Global Solutions - Educational Consulting</title>
+    <title>Edura Global Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Poppins', sans-serif; }
@@ -24,7 +26,17 @@
             z-index: -1;
             border-radius: inherit;
         }
+        @keyframes glow {
+          0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.7); }
+          50% { box-shadow: 0 0 16px 4px rgba(56,189,248,0.7); }
+        }
+        .animate-glow { animation: glow 1.5s infinite; }
     </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({ duration: 900, once: true });
+      });
+    </script>
 </head>
 <body class="bg-gradient-to-br from-sky-50 via-white to-sky-50 min-h-screen flex flex-col">
     <!-- Header Section -->
@@ -112,29 +124,28 @@
         <div class="relative container mx-auto px-4 py-20 lg:py-32">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <!-- Text Content -->
-                <div class="flex-1 text-center lg:text-left">
+                <div class="flex-1 text-center lg:text-left" data-aos="fade-right">
                     <div class="inline-block px-4 py-2 bg-sky-100 rounded-full text-sky-600 font-semibold mb-6 animate-float">
                         Welcome to Excellence in Education
                     </div>
-                    <h1 class="text-4xl lg:text-6xl font-bold text-sky-900 mb-6 leading-tight">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-sky-900 mb-6 leading-tight" data-aos="fade-down" data-aos-delay="100">
                         Transforming Education for 
                         <span class="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">Tomorrow's Leaders</span>
                     </h1>
-                    <p class="text-lg text-sky-700 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+                    <p class="text-lg text-sky-700 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="200">
                         Partner with us to revolutionize your educational institution. We provide comprehensive solutions for academic excellence, innovative learning, and institutional growth.
                     </p>
                     <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl hover:shadow-lg transform hover:-translate-y-0.5 transition-all text-center">
+                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-glow text-center" data-aos="zoom-in" data-aos-delay="300">
                             Get Started
                         </a>
-                        <a href="about.html" class="w-full sm:w-auto px-8 py-4 border-2 border-sky-500 text-sky-600 font-semibold rounded-xl hover:bg-sky-50 transition-all text-center">
+                        <a href="about.html" class="w-full sm:w-auto px-8 py-4 border-2 border-sky-500 text-sky-600 font-semibold rounded-xl hover:bg-sky-50 transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="400">
                             Learn More
                         </a>
                     </div>
                 </div>
-                
                 <!-- Image/Illustration -->
-                <div class="flex-1 relative">
+                <div class="flex-1 relative" data-aos="fade-left">
                     <div class="relative w-full aspect-square max-w-lg mx-auto">
                         <div class="absolute inset-0 bg-gradient-to-br from-sky-200/50 to-blue-300/50 rounded-2xl transform rotate-3"></div>
                         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Educational Excellence" class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
@@ -151,7 +162,7 @@
     <section class="py-20 bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden">
         <!-- Section Header -->
         <div class="container mx-auto px-4 mb-16">
-            <div class="text-center max-w-3xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
                 <h2 class="text-3xl lg:text-4xl font-bold text-sky-900 mb-4">
                     Why Choose Edura Global?
                 </h2>
@@ -166,7 +177,7 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Feature 1 -->
-                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 bg-gradient-overlay relative overflow-hidden">
+                <div class="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-overlay relative overflow-hidden transform hover:scale-105 hover:-translate-y-1" data-aos="zoom-in" data-aos-delay="0">
                     <div class="w-14 h-14 bg-gradient-to-br from-sky-400 to-blue-600 rounded-xl flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform">
                         <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
