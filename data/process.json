@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "title": "Consultation",
+    "description": "Understand client needs and goals.",
+    "icon": "chat"
+  },
+  {
+    "id": 2,
+    "title": "Strategy",
+    "description": "Develop a tailored education strategy.",
+    "icon": "lightbulb"
+  }
+]

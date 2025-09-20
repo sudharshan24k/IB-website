@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Curriculum Design",
+    "description": "Custom curriculum development for schools and institutions.",
+    "icon": "academic-cap"
+  },
+  {
+    "id": 2,
+    "name": "Teacher Training",
+    "description": "Workshops and certification for educators.",
+    "icon": "chalkboard-teacher"
+  }
+]

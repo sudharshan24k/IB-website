@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Asha Patel",
+    "role": "Founder & CEO",
+    "bio": "Visionary leader in EdTech innovation.",
+    "image": "images/team1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Rahul Mehra",
+    "role": "CTO",
+    "bio": "Expert in scalable education platforms.",
+    "image": "images/team2.jpg"
+  }
+]

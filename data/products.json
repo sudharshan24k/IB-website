@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Smart Learning Platform",
+    "description": "An AI-powered platform for personalized education.",
+    "image": "images/product1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Virtual Classroom Suite",
+    "description": "A complete solution for online teaching and collaboration.",
+    "image": "images/product2.jpg"
+  }
+]
