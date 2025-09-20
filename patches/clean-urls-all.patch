@@ -1,0 +1,50 @@
+*** Begin Patch
+*** Update Files: All navigation links in HTML files
+@@ about.html, services.html, products.html, process.html, resources.html, contact.html
+-        <a href="index.html" class="inline-flex flex-col items-center">
++        <a href="/" class="inline-flex flex-col items-center">
+
+-          <a href="index.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Home</a>
++          <a href="/" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Home</a>
+
+-          <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">About</a>
++          <a href="/about" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">About</a>
+
+-          <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Products</a>
++          <a href="/products" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Products</a>
+
+-          <a href="services.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Services</a>
++          <a href="/services" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Services</a>
+
+-          <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Process</a>
++          <a href="/process" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Process</a>
+
+-          <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Resources</a>
++          <a href="/resources" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 hover:text-sky-800 transition-all relative group">Resources</a>
+
+-          <a href="contact.html" class="ml-2 px-6 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all">Contact</a>
++          <a href="/contact" class="ml-2 px-6 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg transform hover:-translate-y-0.5 transition-all">Contact</a>
+
+@@ Mobile Menu Links
+-                            <a href="index.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Home</a>
++                            <a href="/" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Home</a>
+
+-                            <a href="about.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">About</a>
++                            <a href="/about" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">About</a>
+
+-                            <a href="products.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Products</a>
++                            <a href="/products" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Products</a>
+
+-                            <a href="services.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Services</a>
++                            <a href="/services" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Services</a>
+
+-                            <a href="process.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Process</a>
++                            <a href="/process" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Process</a>
+
+-                            <a href="resources.html" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Resources</a>
++                            <a href="/resources" class="px-4 py-2 text-sky-600 rounded-lg hover:bg-sky-50 transition-colors">Resources</a>
+
+-                            <a href="contact.html" class="px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg">Contact</a>
++                            <a href="/contact" class="px-4 py-2 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-lg">Contact</a>
+
+*** End Patch
