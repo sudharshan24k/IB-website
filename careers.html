@@ -163,6 +163,13 @@
         <div id="back-to-jobs" class="hidden" onclick="backToJobs()">Back to Jobs</div>
     </section>
 
+    <div id="footer"></div>
+    <script>
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('footer').innerHTML = data; });
+    </script>
+
     <script>
         // Fetch and display job listings
         fetch('data/jobs.json')

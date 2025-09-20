@@ -270,55 +270,11 @@
   </section>
 
     <!-- Footer Section -->
-    <footer class="bg-sky-900 text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-sky-400 to-blue-500 rounded-lg flex items-center justify-center">
-                            <span class="text-xl font-bold text-white">IB</span>
-                        </div>
-                        <span class="text-2xl font-bold">Excellence</span>
-                    </div>
-                    <p class="text-sky-200 mb-4 max-w-md">Empowering educational institutions with innovative solutions for excellence in teaching and learning.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="about.html" class="text-sky-200 hover:text-white transition-colors">About Us</a></li>
-                        <li><a href="products.html" class="text-sky-200 hover:text-white transition-colors">Products</a></li>
-                        <li><a href="services.html" class="text-sky-200 hover:text-white transition-colors">Services</a></li>
-                        <li><a href="contact.html" class="text-sky-200 hover:text-white transition-colors">Contact</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Privacy Policy</a></li>
-                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Terms of Service</a></li>
-                        <li><a href="#" class="text-sky-200 hover:text-white transition-colors">Cookie Policy</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-sky-800 mt-8 pt-8 text-center md:text-left">
-                <p class="text-sky-200">&copy; 2025 Edura Global Solutions. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Menu Toggle Script -->
+    <div id="footer"></div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuButton = document.querySelector('button.md\\:hidden');
-            const mobileMenu = document.querySelector('.md\\:hidden .absolute');
-            
-            mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
-                setTimeout(() => {
-                    mobileMenu.classList.toggle('opacity-0');
-                }, 10);
-            });
-        });
+      fetch('footer.html')
+        .then(res => res.text())
+        .then(data => { document.getElementById('footer').innerHTML = data; });
     </script>
 </body>
 </html>
