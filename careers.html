@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Edura Global Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; }
+
+        /* Enhanced Styling for Job Cards */
+        #job-listings div {
+            background: linear-gradient(to bottom right, #38bdf8, #3b82f6);
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+            color: white;
+            padding: 1.5rem;
+            cursor: pointer;
+        }
+
+        #job-listings div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        #job-listings h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        #job-listings button {
+            background: white;
+            color: #3b82f6;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #job-listings button:hover {
+            background: #e0f2fe;
+            transform: scale(1.05);
+        }
+
+        /* Enhanced Styling for Application Form */
+        #job-application {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-top: 2rem;
+            animation: fadeIn 0.5s ease;
+        }
+
+        #job-application h2 {
+            background: linear-gradient(to right, #38bdf8, #3b82f6);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        #job-application form input, #job-application form textarea {
+            border: 1px solid #e5e7eb;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            width: 100%;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        #job-application form input:focus, #job-application form textarea:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+        }
+
+        #job-application form button {
+            background: linear-gradient(to right, #38bdf8, #3b82f6);
+            color: white;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #job-application form button:hover {
+            background: linear-gradient(to right, #3b82f6, #2563eb);
+            transform: scale(1.05);
+        }
+
+        /* Back to Jobs Button */
+        #back-to-jobs {
+            background: #e0f2fe;
+            color: #3b82f6;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        #back-to-jobs:hover {
+            background: #bae6fd;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-sky-50 via-white to-sky-50 min-h-screen flex flex-col">
+    <!-- Header Section -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(res => res.text())
+            .then(data => { document.getElementById('header').innerHTML = data; });
+    </script>
+
+    <!-- Careers Section -->
+    <section class="container mx-auto px-4 py-12">
+        <h1 class="text-4xl font-bold text-center text-sky-800 mb-8">Join Our Team</h1>
+        <div id="job-listings" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Job cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Job Application Form -->
+        <div id="job-application" class="hidden mt-12">
+            <h2 class="text-2xl font-bold text-sky-800 mb-4">Apply for <span id="job-title"></span></h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="full-name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="full-name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm" required>
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm" required>
+                </div>
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="text" id="phone" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm" required>
+                </div>
+                <div>
+                    <label for="resume" class="block text-sm font-medium text-gray-700">Resume</label>
+                    <input type="file" id="resume" class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-sky-50 file:text-sky-700 hover:file:bg-sky-100" required>
+                </div>
+                <div>
+                    <label for="cover-letter" class="block text-sm font-medium text-gray-700">Cover Letter / Message</label>
+                    <textarea id="cover-letter" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-sky-500 focus:border-sky-500 sm:text-sm"></textarea>
+                </div>
+                <button type="submit" class="w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-sky-600 hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500">Submit</button>
+            </form>
+        </div>
+
+        <!-- Back to Jobs Button -->
+        <div id="back-to-jobs" class="hidden" onclick="backToJobs()">Back to Jobs</div>
+    </section>
+
+    <script>
+        // Fetch and display job listings
+        fetch('data/jobs.json')
+            .then(response => response.json())
+            .then(jobs => {
+                const jobListings = document.getElementById('job-listings');
+                jobs.forEach(job => {
+                    const jobCard = document.createElement('div');
+                    jobCard.className = 'p-6';
+                    jobCard.innerHTML = `
+                        <h3>${job.title}</h3>
+                        <button onclick="applyForJob('${job.title}')">Apply</button>
+                    `;
+                    jobListings.appendChild(jobCard);
+                });
+            });
+
+        // Show job application form
+        function applyForJob(jobTitle) {
+            document.getElementById('job-title').textContent = jobTitle;
+            document.getElementById('job-listings').style.display = 'none';
+            document.getElementById('job-application').classList.remove('hidden');
+        }
+
+        // Back to Jobs
+        function backToJobs() {
+            document.getElementById('job-listings').style.display = 'grid';
+            document.getElementById('job-application').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
