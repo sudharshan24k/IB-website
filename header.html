@@ -79,22 +79,31 @@
   }
 
   /* Mobile Menu */
+
   #mobile-menu {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
+  background: #fff; /* solid white */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid #e0e7ef;
+  transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), background 0.3s;
+  z-index: 100;
   }
 
   #mobile-menu.open {
     display: block;
-    max-height: 300px;
+    max-height: 350px;
+    animation: dropdownFadeIn 0.4s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  @keyframes dropdownFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 
   #mobile-menu a {
@@ -114,21 +123,21 @@
   <div class="container mx-auto px-4 py-6 flex flex-col items-center">
     
     <!-- Top Row: Logo on Left, Company Name in Center, Mobile Button on Right -->
-    <div class="w-full flex items-center justify-center relative mb-4">
+    <div class="w-full flex items-center justify-between mb-4">
       <!-- Logo (left) -->
-      <a href="index.html" class="absolute left-0 flex items-center">
+      <a href="index.html" class="flex items-center flex-shrink-0">
         <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-lg flex items-center justify-center mr-2 shadow-md logo">
           <span class="text-2xl font-bold text-white">EG</span>
         </div>
       </a>
 
       <!-- Company Name (center) -->
-      <h1 class="text-3xl md:text-4xl font-extrabold text-sky-800 tracking-wide text-center">
+      <h1 class="text-3xl md:text-4xl font-extrabold text-sky-800 tracking-wide text-center flex-grow px-2">
         Edura Global Solutions
       </h1>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="absolute right-0 md:hidden p-2 rounded-lg bg-white shadow text-sky-800 hover:text-sky-600">
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-white shadow text-sky-800 hover:text-sky-600 ml-2 z-10" style="z-index:10;">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                 d="M4 6h16M4 12h16m-7 6h7" />
@@ -154,7 +163,7 @@
     </nav>
 
     <!-- Mobile Navigation (hidden by default) -->
-    <nav id="mobile-menu" class="hidden flex-col items-center mt-4 space-y-3 text-lg font-medium md:hidden">
+  <nav id="mobile-menu" class="flex-col items-center mt-4 space-y-3 text-lg font-medium md:hidden" style="display:none;">
       <a href="index.html" class="text-sky-600 hover:text-sky-800">Home</a>
       <a href="about.html" class="text-sky-600 hover:text-sky-800">About</a>
       <a href="products.html" class="text-sky-600 hover:text-sky-800">Products</a>
@@ -168,15 +177,3 @@
     </nav>
   </div>
 </header>
-
-<!-- Small JS for toggling mobile menu -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuBtn.addEventListener('click', function() {
-      mobileMenu.classList.toggle('open');
-    });
-  });
-</script>

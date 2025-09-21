@@ -13,9 +13,24 @@
 </head>
   <div id="header"></div>
   <script>
+    // Fetch and inject header
     fetch('header.html')
       .then(res => res.text())
-      .then(data => { document.getElementById('header').innerHTML = data; });
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+        // Attach mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+          mobileMenuBtn.addEventListener('click', function() {
+            if (mobileMenu.style.display === 'block') {
+              mobileMenu.style.display = 'none';
+            } else {
+              mobileMenu.style.display = 'block';
+            }
+          });
+        }
+      });
   </script>
     <!-- Hero Section -->
     <section class="relative py-20 overflow-hidden">
