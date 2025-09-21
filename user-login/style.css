@@ -1,0 +1,109 @@
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #38bdf8, #1976d2, #b3e5fc, #e0f7fa);
+  background-size: 300% 300%;
+  animation: gradientMove 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.login-container {
+  background: rgba(255,255,255,0.95);
+  padding: 2.5rem 2rem 2rem 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  color: #1976d2;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+label {
+  align-self: flex-start;
+  margin-bottom: 0.3rem;
+  color: #1976d2;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 1.2rem;
+  border: 1.5px solid #b3e5fc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #f5fafd;
+  transition: border 0.2s, box-shadow 0.2s;
+  box-shadow: 0 1px 4px rgba(56, 189, 248, 0.07);
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1.5px solid #1976d2;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(90deg, #38bdf8 0%, #1976d2 100%);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(56, 189, 248, 0.15);
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #1976d2 0%, #38bdf8 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(56, 189, 248, 0.18);
+}
+
+#loginMessage {
+  margin-top: 1rem;
+  color: #d32f2f;
+  font-size: 1rem;
+  min-height: 1.2em;
+  animation: fadeIn 1.2s cubic-bezier(.23,1.01,.32,1);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
