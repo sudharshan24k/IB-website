@@ -9,28 +9,83 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <style>
-        html { scroll-behavior: smooth; }
-        body { font-family: 'Poppins', sans-serif; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        .animate-float {
-            animation: float 3s ease-in-out infinite;
-        }
-        .bg-gradient-overlay::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(59, 130, 246, 0.2));
-            z-index: -1;
-            border-radius: inherit;
-        }
-        @keyframes glow {
-          0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.7); }
-          50% { box-shadow: 0 0 16px 4px rgba(56,189,248,0.7); }
-        }
-        .animate-glow { animation: glow 1.5s infinite; }
+                /* Stylish hero headline */
+                .hero-headline {
+                    text-shadow: 0 4px 24px rgba(56, 189, 248, 0.10), 0 1.5px 0 #fff;
+                    letter-spacing: -0.01em;
+                }
+                /* Blurred glass card for hero paragraph */
+                .hero-blur-card {
+                    background: rgba(255,255,255,0.7);
+                    box-shadow: 0 8px 32px 0 rgba(56,189,248,0.10);
+                    backdrop-filter: blur(8px) saturate(1.2);
+                    border-radius: 1.25rem;
+                    border: 1.5px solid rgba(56,189,248,0.10);
+                    padding: 2rem 2.5rem;
+                    margin-top: 1.5rem;
+                    margin-bottom: 1.5rem;
+                    display: inline-block;
+                    animation: fadeInUp 1.2s cubic-bezier(.4,2,.3,1) 0.2s both;
+                }
+                @keyframes fadeInUp {
+                    0% { opacity: 0; transform: translateY(32px); }
+                    100% { opacity: 1; transform: none; }
+                }
+                .hero-blur-card p {
+                    font-size: 1.18rem;
+                    color: #0369a1;
+                    font-weight: 500;
+                    letter-spacing: 0.01em;
+                    line-height: 1.7;
+                    text-align: center;
+                }
+                html { scroll-behavior: smooth; }
+                body { font-family: 'Poppins', sans-serif; }
+                @keyframes float {
+                        0%, 100% { transform: translateY(0); }
+                        50% { transform: translateY(-10px); }
+                }
+                .animate-float {
+                        animation: float 3s ease-in-out infinite;
+                }
+                .bg-gradient-overlay::before {
+                        content: '';
+                        position: absolute;
+                        inset: 0;
+                        background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(59, 130, 246, 0.2));
+                        z-index: -1;
+                        border-radius: inherit;
+                }
+                @keyframes glow {
+                    0%, 100% { box-shadow: 0 0 0 0 rgba(56,189,248,0.7); }
+                    50% { box-shadow: 0 0 24px 8px rgba(56,189,248,0.7); }
+                }
+                .animate-glow { animation: glow 1.5s infinite; }
+                /* Enhanced card hover */
+                .card-3d {
+                    transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.4s;
+                }
+                .card-3d:hover {
+                    transform: translateY(-8px) scale(1.03) rotateZ(-1deg);
+                    box-shadow: 0 12px 32px 0 rgba(56, 189, 248, 0.15), 0 2px 8px 0 rgba(59, 130, 246, 0.10);
+                }
+                /* Decorative SVG background for hero */
+                .hero-bg-svg {
+                    position: absolute;
+                    top: 0; left: 0; width: 100%; height: 100%;
+                    pointer-events: none;
+                    z-index: 0;
+                }
+                /* Button pulse */
+                .btn-pulse {
+                    box-shadow: 0 0 0 0 rgba(56,189,248,0.5);
+                    animation: pulse 2s infinite;
+                }
+                @keyframes pulse {
+                    0% { box-shadow: 0 0 0 0 rgba(56,189,248,0.5); }
+                    70% { box-shadow: 0 0 0 16px rgba(56,189,248,0); }
+                    100% { box-shadow: 0 0 0 0 rgba(56,189,248,0); }
+                }
     </style>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
@@ -63,53 +118,154 @@
     </script>
 
     <!-- Hero Section -->
-    <section class="relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-blue-50"></div>
-        <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-bl-[200px]"></div>
-        <div class="absolute bottom-0 left-0 w-1/2 h-1/2 bg-gradient-to-tr from-sky-400/10 to-transparent rounded-tr-[200px]"></div>
-        
-        <!-- Floating Elements -->
-        <div class="absolute top-20 right-20 w-24 h-24 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full animate-float"></div>
-        <div class="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-br from-sky-400/20 to-blue-600/20 rounded-full animate-float" style="animation-delay: -1.5s"></div>
-        
-        <!-- Content -->
-        <div class="relative container mx-auto px-4 py-20 lg:py-32">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <!-- Text Content -->
-                <div class="flex-1 text-center lg:text-left" data-aos="fade-right">
-                    <div class="inline-block px-4 py-2 bg-sky-100 rounded-full text-sky-600 font-semibold mb-6 animate-float">
-                        Welcome to Excellence in Education
-                    </div>
-                    <h1 class="text-4xl lg:text-6xl font-bold text-sky-900 mb-6 leading-tight" data-aos="fade-down" data-aos-delay="100">
-                        Transforming Education for 
-                        <span class="bg-gradient-to-r from-sky-500 to-blue-600 bg-clip-text text-transparent">Tomorrow's Leaders</span>
-                    </h1>
-                    <p class="text-lg text-sky-700 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0" data-aos="fade-up" data-aos-delay="200">
-                        Partner with us to revolutionize your educational institution. We provide comprehensive solutions for academic excellence, innovative learning, and institutional growth.
-                    </p>
-                    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-                        <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-glow text-center" data-aos="zoom-in" data-aos-delay="300">
-                            Get Started
-                        </a>
-                        <a href="about.html" class="w-full sm:w-auto px-8 py-4 border-2 border-sky-500 text-sky-600 font-semibold rounded-xl hover:bg-sky-50 transition-all duration-300 hover:scale-105 text-center" data-aos="zoom-in" data-aos-delay="400">
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-                <!-- Image/Illustration -->
-                <div class="flex-1 relative" data-aos="fade-left">
-                    <div class="relative w-full aspect-square max-w-lg mx-auto">
-                        <div class="absolute inset-0 bg-gradient-to-br from-sky-200/50 to-blue-300/50 rounded-2xl transform rotate-3"></div>
-                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Educational Excellence" class="absolute inset-0 w-full h-full object-cover rounded-2xl shadow-xl transform -rotate-3 hover:rotate-0 transition-transform duration-500">
-                    </div>
-                    <!-- Decorative Elements -->
-                    <div class="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-br from-purple-400/30 to-pink-500/30 rounded-full opacity-75 animate-float"></div>
-                    <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-br from-green-400/30 to-emerald-600/30 rounded-full opacity-75 animate-float" style="animation-delay: -0.5s"></div>
+        <section class="relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-sky-50 via-white to-blue-50"></div>
+    <svg class="hero-bg-svg" viewBox="0 0 1440 320"><defs><linearGradient id="heroGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#38bdf8" stop-opacity="0.12"/><stop offset="100%" stop-color="#6366f1" stop-opacity="0.10"/></linearGradient></defs><path fill="url(#heroGrad)" d="M0,160L60,170.7C120,181,240,203,360,197.3C480,192,600,160,720,133.3C840,107,960,85,1080,101.3C1200,117,1320,171,1380,197.3L1440,224L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg>
+    <div class="relative container mx-auto px-4 py-24 lg:py-36 z-10">
+            <div class="flex flex-col items-center text-center gap-8">
+                                <h1 class="text-4xl lg:text-6xl font-extrabold mb-4 leading-tight text-center" data-aos="fade-down">
+                                    <span class="block bg-gradient-to-r from-sky-600 via-blue-500 to-fuchsia-500 bg-clip-text text-transparent drop-shadow-2xl">
+                                        Empowering Education Through
+                                    </span>
+                                    <span class="block mt-2 text-5xl lg:text-7xl font-extrabold bg-gradient-to-r from-fuchsia-400 via-sky-400 to-blue-600 bg-clip-text text-transparent hero-3d-text">
+                                        Expertise and Innovation
+                                    </span>
+                                </h1>
+                                                <div class="w-full flex justify-center">
+                                                    <div class="relative hero-blur-card mx-auto max-w-4xl mt-8 mb-2 px-10 py-8 rounded-3xl shadow-2xl border border-transparent bg-white/60 backdrop-blur-xl" style="box-shadow: 0 12px 48px 0 rgba(56, 189, 248, 0.15); border-image: linear-gradient(90deg, #38bdf8 0%, #a78bfa 100%) 1;">
+                                                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-32 h-2 bg-gradient-to-r from-sky-400 via-fuchsia-400 to-blue-500 rounded-full opacity-80"></div>
+                                                        <p class="text-lg md:text-xl font-medium text-sky-800 text-center leading-relaxed tracking-wide" style="text-shadow: 0 1px 0 #fff, 0 2px 8px rgba(56,189,248,0.07);">
+                                                            Edura Global delivers end-to-end solutions for schools and students across <span class="font-semibold text-sky-700">teacher recruitment, professional development, curriculum transition, school consultancy, student counseling, admissions support, homeschooling,</span> and <span class="font-semibold text-sky-700">exam center services</span>. We partner with institutions and families to enable academic excellence, global standards, and personalized learning pathways.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                <style>
+                                .hero-3d-text {
+                                    text-shadow:
+                                        0 4px 24px rgba(56, 189, 248, 0.18),
+                                        0 2px 0 #fff,
+                                        2px 4px 0 rgba(59, 130, 246, 0.10),
+                                        0 8px 32px 0 rgba(236, 72, 153, 0.10);
+                                    letter-spacing: 0.01em;
+                                }
+                                </style>
+                <div class="flex flex-col sm:flex-row items-center gap-4 justify-center">
+                    <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl animate-glow btn-pulse text-center">
+                        Get Started
+                    </a>
+                    <a href="about.html" class="w-full sm:w-auto px-8 py-4 border-2 border-sky-500 text-sky-600 font-semibold rounded-xl hover:bg-sky-50 transition-all duration-300 hover:scale-105 text-center">
+                        Learn More
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+    </div>
+        </section>
+
+        <!-- Verticals Quick Navigation Section -->
+    <section class="our-verticals-section py-20 bg-gradient-to-br from-sky-100 via-blue-50 to-purple-100 relative z-10 rounded-3xl shadow-2xl mx-2 md:mx-8 my-12">
+            <div class="container mx-auto px-4">
+                <h2 class="our-verticals-title text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-fuchsia-500 to-blue-700 text-center mb-14 tracking-tight drop-shadow-2xl">Our Verticals</h2>
+                <div class="verticals-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <!-- Teacher Recruitment -->
+                    <a href="services.html#teacher-recruitment" class="vertical-card group block bg-gradient-to-br from-sky-50 via-blue-100 to-fuchsia-100 hover:from-sky-100 hover:via-blue-200 hover:to-fuchsia-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-sky-100 hover:border-fuchsia-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-sky-400 via-blue-400 to-fuchsia-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0H6m6 0h6'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Teacher Recruitment & Staffing</h3>
+                        <!-- ...existing code... -->
+                        <!-- ...existing code... -->
+                        <!-- ...existing code... -->
+                        <!-- ...existing code... -->
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                        <!-- ...existing code... -->
+                        <!-- ...existing code... -->
+                        <!-- ...existing code... -->
+                            <li>Sourcing & screening teachers for IB, IGCSE, etc.</li>
+                            <li>Staffing</li>
+                            <li>Leadership hiring (Principals, Coordinators)</li>
+                        </ul>
+                    </a>
+                    <!-- Teacher Training -->
+                    <a href="services.html#teacher-training" class="vertical-card group block bg-gradient-to-br from-fuchsia-50 via-pink-100 to-sky-100 hover:from-fuchsia-100 hover:via-pink-200 hover:to-sky-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-fuchsia-100 hover:border-sky-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-fuchsia-400 via-pink-400 to-sky-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8c-1.657 0-3 1.343-3 3 0 1.657 1.343 3 3 3s3-1.343 3-3c0-1.657-1.343-3-3-3zm0 10c-4.418 0-8-1.79-8-4V7c0-2.21 3.582-4 8-4s8 1.79 8 4v7c0 2.21-3.582 4-8 4z'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Professional Development and Teacher Training</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>IB/IGCSE teacher training and certification</li>
+                            <li>CBSE/ICSE to IB methodology transition workshops</li>
+                            <li>21st-century teaching skills, classroom management, assessment strategies</li>
+                        </ul>
+                    </a>
+                    <!-- Curriculum Transition -->
+                    <a href="services.html#curriculum-transition" class="vertical-card group block bg-gradient-to-br from-green-50 via-emerald-100 to-blue-100 hover:from-green-100 hover:via-emerald-200 hover:to-blue-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-green-100 hover:border-blue-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-green-400 via-emerald-400 to-blue-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 17v-2a4 4 0 018 0v2m-4-6a4 4 0 100-8 4 4 0 000 8zm6 8v-2a6 6 0 00-12 0v2'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Curriculum Transition and Alignment</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>CBSE/ICSE to IB/IGCSE curriculum mapping</li>
+                            <li>Gap analysis and bridge program design</li>
+                            <li>School transformation consulting</li>
+                        </ul>
+                    </a>
+                    <!-- School Consultancy -->
+                    <a href="services.html#school-consultancy" class="vertical-card group block bg-gradient-to-br from-yellow-50 via-orange-100 to-pink-100 hover:from-yellow-100 hover:via-orange-200 hover:to-pink-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-yellow-100 hover:border-pink-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-yellow-400 via-orange-400 to-pink-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 7v4a1 1 0 001 1h3m10-5v4a1 1 0 01-1 1h-3m-4 4h4m-2 0v4m0 0H7m4 0h4'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">School Improvement & Consultancy</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>Curriculum development and enrichment</li>
+                            <li>Pedagogical audit</li>
+                            <li>Accreditation (IB candidacy, CIS, NEASC, WIS) support</li>
+                        </ul>
+                    </a>
+                    <!-- Student Counseling -->
+                    <a href="services.html#student-counseling" class="vertical-card group block bg-gradient-to-br from-pink-50 via-fuchsia-100 to-blue-100 hover:from-pink-100 hover:via-fuchsia-200 hover:to-blue-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-pink-100 hover:border-blue-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-pink-400 via-fuchsia-400 to-blue-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 14l9-5-9-5-9 5 9 5zm0 0v6m0 0H6m6 0h6'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Student Counseling and Academic Planning</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>Career and aptitude assessments</li>
+                            <li>Subject selection and stream alignment</li>
+                            <li>College planning and profile building</li>
+                        </ul>
+                    </a>
+                    <!-- Admissions Support -->
+                    <a href="services.html#admissions-support" class="vertical-card group block bg-gradient-to-br from-blue-50 via-sky-100 to-green-100 hover:from-blue-100 hover:via-sky-200 hover:to-green-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-blue-100 hover:border-green-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-blue-400 via-sky-400 to-green-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 7a4 4 0 01-8 0m8 0a4 4 0 00-8 0m8 0V5a4 4 0 00-8 0v2m8 0a4 4 0 01-8 0m8 0v2a4 4 0 01-8 0V7'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">School Placement and Admissions Support</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>School shortlisting and application support (India & abroad)</li>
+                            <li>SOP creation</li>
+                            <li>Interview prep and admission coaching</li>
+                        </ul>
+                    </a>
+                    <!-- Homeschooling -->
+                    <a href="services.html#homeschooling" class="vertical-card group block bg-gradient-to-br from-purple-50 via-fuchsia-100 to-blue-100 hover:from-purple-100 hover:via-fuchsia-200 hover:to-blue-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-purple-100 hover:border-blue-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-purple-400 via-fuchsia-400 to-blue-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8c-1.657 0-3 1.343-3 3 0 1.657 1.343 3 3 3s3-1.343 3-3c0-1.657-1.343-3-3-3zm0 10c-4.418 0-8-1.79-8-4V7c0-2.21 3.582-4 8-4s8 1.79 8 4v7c0 2.21-3.582 4-8 4z'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Homeschooling Solutions</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5">
+                            <li>Personalized learning plans</li>
+                            <li>Tutor recruitment and scheduling</li>
+                            <li>Assessment and academic progress tracking</li>
+                            <li>Cambridge or IB homeschooling pathways</li>
+                        </ul>
+                    </a>
+                    <!-- Exam Center Services -->
+                    <a href="services.html#exam-center" class="vertical-card group block bg-gradient-to-br from-emerald-50 via-green-100 to-blue-100 hover:from-emerald-100 hover:via-green-200 hover:to-blue-200 rounded-2xl shadow-2xl p-8 transition-all border-2 border-emerald-100 hover:border-blue-400">
+                        <div class="vertical-card-icon mb-4 animate-float bg-gradient-to-br from-emerald-400 via-green-400 to-blue-400 shadow-lg"><svg xmlns='http://www.w3.org/2000/svg' class='h-10 w-10 text-white' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 17v-2a4 4 0 018 0v2m-4-6a4 4 0 100-8 4 4 0 000 8zm6 8v-2a6 6 0 00-12 0v2'/></svg></div>
+                        <h3 class="vertical-card-title text-lg font-semibold text-sky-800 mb-2 group-hover:text-sky-600 transition-colors duration-300">Exam Center Services</h3>
+                        <ul class="text-sky-700 text-sm list-disc pl-5 transition-colors duration-300 group-hover:text-sky-900">
+                            <li>Cambridge/IB exam facilitation</li>
+                            <li>Administration, staffing, and logistics support</li>
+                        </ul>
+                    </a>
+                </div>
+            </div>
+            <style>
+            /* Custom enhancements for Our Verticals section */
+            .our-verticals-section { box-shadow: 0 8px 40px 0 rgba(60, 72, 88, 0.13); }
+            .vertical-card { transition: transform 0.22s, box-shadow 0.22s; }
+            .vertical-card:hover { transform: translateY(-10px) scale(1.04); box-shadow: 0 12px 40px 0 rgba(60, 72, 88, 0.18); z-index: 2; }
+            .vertical-card-icon { border-radius: 50%; box-shadow: 0 2px 12px 0 rgba(25, 118, 210, 0.13); display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; }
+            @media (max-width: 900px) {
+                .verticals-list { grid-template-columns: 1fr !important; }
+            }
+            </style>
+        </section>
 
     <!-- Features Section -->
     <section class="py-20 bg-gradient-to-br from-white via-sky-50 to-white relative overflow-hidden">
@@ -205,9 +361,7 @@
                     <a href="contact.html" class="w-full sm:w-auto px-8 py-4 bg-white text-sky-900 font-semibold rounded-xl hover:bg-sky-50 transition-all text-center">
                         Schedule a Consultation
                     </a>
-                    <a href="resources.html" class="w-full sm:w-auto px-8 py-4 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-all text-center">
-                        Browse Resources
-                    </a>
+                    
                 </div>
             </div>
         </div>

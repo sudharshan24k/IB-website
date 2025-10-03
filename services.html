@@ -5,10 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edura Global Solutions</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Poppins', sans-serif; }
+        .service-heading {
+          font-family: 'Montserrat', 'Poppins', sans-serif;
+          letter-spacing: 0.01em;
+          font-weight: 900;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+        .service-card-title {
+          font-family: 'Montserrat', 'Poppins', sans-serif;
+          font-weight: 800;
+          font-size: 1.25rem;
+          color: #1e293b;
+          letter-spacing: 0.01em;
+        }
+        .service-card-desc {
+          font-size: 1.08rem;
+          font-family: 'Poppins', sans-serif;
+          color: #334155;
+          line-height: 1.6;
+          margin-bottom: 0.7rem;
+        }
+        .service-card-list {
+          font-size: 0.98rem;
+          color: #475569;
+        }
+        .service-card {
+          background: linear-gradient(120deg, #f8fafc 80%, #e3e8ee 100%);
+          border-radius: 1.25rem;
+          box-shadow: 0 4px 24px 0 rgba(30,41,59,0.10);
+          border: 1.5px solid #e5e7eb;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          min-height: 100%;
+          padding: 2.1rem 1.7rem 1.7rem 1.7rem;
+          transition: box-shadow 0.22s, transform 0.22s, border 0.22s;
+        }
+        .service-card:hover {
+          box-shadow: 0 10px 36px 0 rgba(30,41,59,0.16);
+          border: 1.5px solid #0ea5e9;
+          transform: translateY(-7px) scale(1.018);
+        }
+        .service-card-icon {
+          width: 3.5rem;
+          height: 3.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 9999px;
+          margin-bottom: 1.1rem;
+          margin-right: 0.5rem;
+          box-shadow: 0 2px 8px 0 rgba(30,41,59,0.10);
+        }
+        .service-card--accent1 { border-left: 5px solid #fbbf24; }
+        .service-card--accent2 { border-left: 5px solid #22c55e; }
+        .service-card--accent3 { border-left: 5px solid #6366f1; }
+        .service-card--accent4 { border-left: 5px solid #0ea5e9; }
+        .service-card-icon--accent1 { background: linear-gradient(135deg, #fbbf24 60%, #fde68a 100%); }
+        .service-card-icon--accent2 { background: linear-gradient(135deg, #22c55e 60%, #bbf7d0 100%); }
+        .service-card-icon--accent3 { background: linear-gradient(135deg, #6366f1 60%, #c7d2fe 100%); }
+        .service-card-icon--accent4 { background: linear-gradient(135deg, #0ea5e9 60%, #bae6fd 100%); }
+        @media (min-width: 768px) {
+          .service-card {
+            padding: 2.2rem 2rem 2rem 2rem;
+          }
+        }
     </style>
 </head>
 <body class="bg-gradient-to-br from-sky-50 via-white to-sky-50 min-h-screen flex flex-col">
@@ -37,224 +102,133 @@
 
     <!-- Main Content -->
     <div class="flex-grow">
-        <!-- Service 1: Strategic Consulting -->
-        <div class="container mx-auto px-4 mb-24">
-            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-                <div class="flex flex-col lg:flex-row">
-                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-sky-50 to-sky-100">
-                        <div class="w-20 h-20 bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-bold text-sky-800 mb-6">Strategic Consulting</h2>
-                        <p class="text-sky-600 mb-8 text-lg">Tailored strategies to enhance educational outcomes and institutional effectiveness.</p>
-                        <ul class="space-y-4 text-sky-700">
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Institutional Assessment
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Strategic Planning
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-sky-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Program Evaluation
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="lg:w-1/2 p-12 lg:p-16">
-                        <div class="h-full flex flex-col justify-between">
-                            <div class="prose prose-sky">
-                                <h3 class="text-xl font-semibold text-sky-800 mb-4">How We Help</h3>
-                                <p class="text-gray-600 mb-6">Our strategic consulting service provides comprehensive support to help your institution achieve excellence in education. We work closely with your team to identify opportunities, overcome challenges, and implement effective solutions.</p>
-                                <h3 class="text-xl font-semibold text-sky-800 mb-4">Benefits</h3>
-                                <ul class="space-y-3 text-gray-600">
-                                    <li>• Enhanced institutional performance</li>
-                                    <li>• Improved student outcomes</li>
-                                    <li>• Optimized resource utilization</li>
-                                    <li>• Clear roadmap for growth</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-sky-500 to-blue-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
-                                Learn More
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 2: Professional Development -->
-        <div class="container mx-auto px-4 mb-24">
-            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-                <div class="flex flex-col lg:flex-row-reverse">
-                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-blue-50 to-blue-100">
-                        <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-bold text-blue-800 mb-6">Professional Development</h2>
-                        <p class="text-blue-600 mb-8 text-lg">Comprehensive training programs for educators and administrators.</p>
-                        <ul class="space-y-4 text-blue-700">
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Workshop Facilitation
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Coaching and Mentoring
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-blue-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Curriculum Development
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="lg:w-1/2 p-12 lg:p-16">
-                        <div class="h-full flex flex-col justify-between">
-                            <div class="prose prose-blue">
-                                <h3 class="text-xl font-semibold text-blue-800 mb-4">How We Help</h3>
-                                <p class="text-gray-600 mb-6">Our professional development services empower educators with the knowledge and skills needed to excel in their roles. We offer a range of training programs tailored to the needs of your institution.</p>
-                                <h3 class="text-xl font-semibold text-blue-800 mb-4">Benefits</h3>
-                                <ul class="space-y-3 text-gray-600">
-                                    <li>• Enhanced teaching skills</li>
-                                    <li>• Improved student engagement</li>
-                                    <li>• Effective classroom management</li>
-                                    <li>• Ongoing professional growth</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
-                                Learn More
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Service 3: Curriculum Support -->
-        <div class="container mx-auto px-4 mb-24">
-            <div class="max-w-6xl mx-auto bg-white rounded-3xl shadow-lg overflow-hidden transform hover:scale-[1.02] transition-all duration-300">
-                <div class="flex flex-col lg:flex-row">
-                    <div class="lg:w-1/2 p-12 lg:p-16 bg-gradient-to-br from-indigo-50 to-indigo-100">
-                        <div class="w-20 h-20 bg-gradient-to-br from-indigo-400 to-purple-500 rounded-2xl flex items-center justify-center mb-8 transform hover:scale-110 transition-transform duration-300">
-                            <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
-                        </div>
-                        <h2 class="text-3xl font-bold text-indigo-800 mb-6">Curriculum Support</h2>
-                        <p class="text-indigo-600 mb-8 text-lg">Expert guidance for curriculum development and implementation.</p>
-                        <ul class="space-y-4 text-indigo-700">
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Curriculum Design
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Resource Development
-                            </li>
-                            <li class="flex items-center">
-                                <span class="w-6 h-6 bg-indigo-200 rounded-lg flex items-center justify-center mr-4">
-                                    <svg class="w-4 h-4 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                    </svg>
-                                </span>
-                                Assessment Planning
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="lg:w-1/2 p-12 lg:p-16">
-                        <div class="h-full flex flex-col justify-between">
-                            <div class="prose prose-indigo">
-                                <h3 class="text-xl font-semibold text-indigo-800 mb-4">How We Help</h3>
-                                <p class="text-gray-600 mb-6">We provide comprehensive assistance in developing and implementing educational curriculum that meets international standards and drives student success.</p>
-                                <h3 class="text-xl font-semibold text-indigo-800 mb-4">Benefits</h3>
-                                <ul class="space-y-3 text-gray-600">
-                                    <li>• Aligned with IB standards</li>
-                                    <li>• Customized learning materials</li>
-                                    <li>• Effective assessment strategies</li>
-                                    <li>• Continuous support and updates</li>
-                                </ul>
-                            </div>
-                            <a href="#" class="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white font-medium rounded-xl shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-300 mt-8">
-                                Learn More
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Call to Action -->
-    <section class="py-20 bg-gradient-to-br from-sky-50 to-sky-100">
+      <section class="py-16 bg-gradient-to-br from-white via-sky-50 to-white">
         <div class="container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-sky-800 mb-6">Ready to Elevate Your Institution?</h2>
-                <p class="text-lg text-sky-600 mb-8">
-                    Let's discuss how our services can help you achieve educational excellence.
-                </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
-                        Schedule Consultation
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="inline-flex items-center justify-center px-8 py-4 bg-white text-sky-600 font-semibold rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300 border-2 border-sky-100">
-                        Download Brochure
-                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                    </a>
+          <h2 class="service-heading text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-600 via-fuchsia-500 to-blue-700 mb-10 text-center tracking-tight drop-shadow-2xl">Our Services</h2>
+          <!-- For Schools -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-bold text-sky-800 mb-6">For Schools</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-2">
+              <!-- 1. Teacher Recruitment & Staffing -->
+              <div class="service-card service-card--accent1">
+                <div class="service-card-icon service-card-icon--accent1">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v4a1 1 0 001 1h3m10-5v4a1 1 0 01-1 1h-3m-4 4h4m-2 0v4m0 0H7m4 0h4"/></svg>
                 </div>
+                <h4 class="service-card-title mb-1">Teacher Recruitment & Staffing</h4>
+                <p class="service-card-desc">Recruiting qualified educators for schools, including international curriculum experts.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>Sourcing & screening teachers for IB, IGCSE, etc.</li>
+                  <li>Staffing</li>
+                  <li>Leadership hiring (Principals, Coordinators)</li>
+                </ul>
+              </div>
+              <!-- 2. Professional Development and Teacher Training -->
+              <div class="service-card service-card--accent2">
+                <div class="service-card-icon service-card-icon--accent2">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3 0 1.657 1.343 3 3 3s3-1.343 3-3c0-1.657-1.343-3-3-3zm0 10c-4.418 0-8-1.79-8-4V7c0-2.21 3.582-4 8-4s8 1.79 8 4v7c0 2.21-3.582 4-8 4z"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">Professional Development and Teacher Training</h4>
+                <p class="service-card-desc">Upskilling educators to meet modern pedagogy and curriculum standards.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>IB/IGCSE teacher training and certification</li>
+                  <li>CBSE/ICSE to IB methodology transition workshops</li>
+                  <li>21st-century teaching skills, classroom management, assessment strategies</li>
+                </ul>
+              </div>
+              <!-- 3. Curriculum Transition and Alignment -->
+              <div class="service-card service-card--accent3">
+                <div class="service-card-icon service-card-icon--accent3">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m9-5a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">Curriculum Transition and Alignment</h4>
+                <p class="service-card-desc">Helping schools or students transition from national to international boards.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>CBSE/ICSE to IB/IGCSE curriculum mapping</li>
+                  <li>Gap analysis and bridge program design</li>
+                  <li>School transformation consulting</li>
+                </ul>
+              </div>
+              <!-- 4. School Improvement & Consultancy -->
+              <div class="service-card service-card--accent4">
+                <div class="service-card-icon service-card-icon--accent4">
+                  <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6l4 2"/><circle cx="12" cy="12" r="10"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">School Improvement & Consultancy</h4>
+                <p class="service-card-desc">Partnering with institutions to upgrade systems, standards, and strategy.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>Curriculum development and enrichment</li>
+                  <li>Pedagogical audit</li>
+                  <li>Accreditation (IB candidacy, CIS, NEASC, WIS) support</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- For Students & Parents -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-bold text-sky-800 mb-8 mt-4">For Students & Parents</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-2 pb-2">
+              <!-- Student Counseling and Academic Planning -->
+              <div class="service-card service-card--accent1">
+                <div class="service-card-icon service-card-icon--accent1">
+                  <svg class="w-8 h-8 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">Student Counseling and Academic Planning</h4>
+                <p class="service-card-desc">Guiding students in choosing subjects, careers, and educational pathways.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>Career and aptitude assessments</li>
+                  <li>Subject selection and stream alignment</li>
+                  <li>College planning and profile building</li>
+                </ul>
+              </div>
+              <!-- School Placement and Admissions Support -->
+              <div class="service-card service-card--accent2">
+                <div class="service-card-icon service-card-icon--accent2">
+                  <svg class="w-8 h-8 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">School Placement and Admissions Support</h4>
+                <p class="service-card-desc">Helping students find the right-fit schools or programs.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>School shortlisting and application support (India & abroad)</li>
+                  <li>SOP creation</li>
+                  <li>Interview prep and admission coaching</li>
+                </ul>
+              </div>
+              <!-- Homeschooling Solutions -->
+              <div class="service-card service-card--accent3">
+                <div class="service-card-icon service-card-icon--accent3">
+                  <svg class="w-8 h-8 text-violet-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">Homeschooling Solutions</h4>
+                <p class="service-card-desc">End-to-end support for students pursuing alternative education paths.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>Personalized learning plans</li>
+                  <li>Tutor recruitment and scheduling</li>
+                  <li>Assessment and academic progress tracking</li>
+                  <li>Cambridge or IB homeschooling pathways</li>
+                </ul>
+              </div>
+            </div>
+          <!-- For Education Boards / Institutions -->
+          <div class="mb-16">
+            <h3 class="text-2xl font-bold text-sky-800 mb-8 mt-4">For Education Boards / Institutions</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:grid-cols-2 pb-2">
+              <!-- Exam Center Services -->
+              <div class="service-card service-card--accent4">
+                <div class="service-card-icon service-card-icon--accent4">
+                  <svg class="w-8 h-8 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                </div>
+                <h4 class="service-card-title mb-1">Exam Center Services</h4>
+                <p class="service-card-desc">Acting as or managing authorized testing/exam centers.</p>
+                <ul class="service-card-list list-disc pl-5">
+                  <li>Cambridge/IB exam facilitation</li>
+                  <li>Administration, staffing, and logistics support</li>
+                </ul>
+              </div>
             </div>
         </div>
-    </section>
+      </section>
+
+
 
     <!-- Footer Section -->
     <div id="footer"></div>
