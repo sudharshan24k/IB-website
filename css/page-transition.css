@@ -1,0 +1,17 @@
+/* Modern slide-fade overlay transition for page navigation */
+.page-transition-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #fff;
+  box-shadow: 0 0 32px 0 rgba(56,189,248,0.10);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s cubic-bezier(.4,2,.3,1), transform 0.6s cubic-bezier(.4,2,.3,1);
+}
+.page-transition-overlay.active {
+  pointer-events: all;
+  opacity: 1;
+  transform: translateY(0);
+}

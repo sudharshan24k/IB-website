@@ -1,3 +1,4 @@
+  <link rel="stylesheet" href="css/page-transition.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -129,20 +130,21 @@
             <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-sky-100 via-transparent to-transparent opacity-40"></div>
         </div>
         <div class="relative container mx-auto px-4">
-            <div class="max-w-4xl mx-auto text-center">
-                <h1 class="text-4xl md:text-5xl font-bold text-sky-800 mb-6">
-                    Transform Your Educational Institution
-                </h1>
-                <div class="mt-2 text-lg text-sky-700 font-medium max-w-2xl mx-auto">
-                  <p>
-                    Edura Global Products: Discover our innovative <strong>education</strong> and <strong>teacher recruitment</strong> solutions for schools and educators. Our products are designed to support <strong>school jobs</strong>, teaching careers, and institutional growth.
-                  </p>
+          <div class="max-w-3xl mx-auto">
+            <div class="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl border border-sky-100 px-6 py-10 md:py-14 flex flex-col items-center text-center overflow-hidden animate__animated animate__fadeInUp" style="box-shadow: 0 8px 32px 0 rgba(56,189,248,0.10);">
+              <div class="absolute -top-8 left-1/2 -translate-x-1/2 w-24 h-24 bg-gradient-to-br from-sky-400 via-fuchsia-400 to-blue-500 rounded-full opacity-30 blur-2xl"></div>
+              <div class="relative z-10 flex flex-col items-center">
+                <div class="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 shadow-lg animate-float">
+                  <svg class="w-9 h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                  </svg>
                 </div>
-                </h1>
-                <p class="text-lg text-sky-600 max-w-2xl mx-auto">
-                    Discover our innovative suite of educational products designed to enhance learning outcomes and institutional excellence.
-                </p>
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-sky-800 mb-3 leading-tight drop-shadow-lg">Transform Your Educational Institution</h1>
+                <p class="text-base sm:text-lg md:text-xl text-sky-700 font-medium mb-2 max-w-2xl">Edura Global Products: <span class="font-semibold text-sky-800">Discover our innovative education and teacher recruitment solutions</span> for schools and educators. Our products are designed to support <span class="font-semibold text-blue-700">school jobs</span>, <span class="font-semibold text-fuchsia-700">teaching careers</span>, and <span class="font-semibold text-emerald-700">institutional growth</span>.</p>
+                <p class="text-base sm:text-lg text-sky-600 max-w-2xl">Discover our innovative suite of educational products designed to enhance learning outcomes and institutional excellence.</p>
+              </div>
             </div>
+          </div>
         </div>
     </section>
 
@@ -428,11 +430,13 @@
   </section>
 
   <div id="footer"></div>
-    <script>
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(data => { document.getElementById('footer').innerHTML = data; });
-    </script>
+</body>
+<script src="js/page-transition.js"></script>
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => { document.getElementById('footer').innerHTML = data; });
+</script>
 </body>
 </html>
 

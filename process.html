@@ -1,3 +1,4 @@
+  <link rel="stylesheet" href="css/page-transition.css">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -80,12 +81,6 @@
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-bold text-sky-800 mb-6">Our Process</h1>
-        <p class="text-xl text-sky-700 leading-relaxed">A structured approach to educational excellence through systematic collaboration and continuous improvement.</p>
-        <div class="mt-2 text-lg text-sky-700 font-medium max-w-2xl mx-auto">
-          <p>
-            Edura Global Process: Our proven process for <strong>teacher recruitment</strong>, <strong>education</strong> solutions, and <strong>school jobs</strong> ensures quality outcomes for schools and educators at every step.
-          </p>
-        </div>
       </div>
     </div>
   </section>
@@ -331,11 +326,13 @@
 
     <!-- Footer Section -->
     <div id="footer"></div>
-    <script>
-      fetch('footer.html')
-        .then(res => res.text())
-        .then(data => { document.getElementById('footer').innerHTML = data; });
-    </script>
+</body>
+<script src="js/page-transition.js"></script>
+<script>
+  fetch('footer.html')
+    .then(res => res.text())
+    .then(data => { document.getElementById('footer').innerHTML = data; });
+</script>
 </body>
 </html>
 <!-- Public page: no secure route needed here. -->

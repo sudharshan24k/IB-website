@@ -42,7 +42,8 @@
         <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" crossorigin="anonymous">
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="css/page-transition.css">
         <style>
                 html { scroll-behavior: smooth; }
                 body { font-family: 'Poppins', sans-serif; }
@@ -322,6 +323,7 @@
         .then(res => res.text())
         .then(data => { document.getElementById('footer').innerHTML = data; });
     </script>
+<script src="js/page-transition.js"></script>
 </body>
 </html>
 <!-- Public page: no secure route needed here. -->
