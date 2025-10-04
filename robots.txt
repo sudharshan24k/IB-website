@@ -1,0 +1,29 @@
+### robots.txt for Edura Global Solutions
+# Best SEO: Allow all search engines, block sensitive/internal, reference sitemap, set crawl-delay, and add comments.
+
+User-agent: *
+# Allow all public pages
+Allow: /
+
+# Block sensitive or non-public directories
+Disallow: /user-login/
+Disallow: /patches/
+Disallow: /data/
+Disallow: /vercel.json
+
+# Block common temporary or backup files
+Disallow: /*.bak$
+Disallow: /*.tmp$
+Disallow: /*.swp$
+
+# Optional: Block search results or duplicate content (uncomment if needed)
+# Disallow: /search
+# Disallow: /*?*
+
+# Crawl-delay for aggressive bots (optional, adjust as needed)
+Crawl-delay: 5
+
+# Sitemap reference (update if domain changes)
+Sitemap: https://eduraglobal.in/sitemap.xml
+
+# End of file
