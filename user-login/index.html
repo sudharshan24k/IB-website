@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0a192f">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>User Login | Edura Global Solutions</title>
@@ -18,6 +20,13 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/service-worker.js');
+    });
+  }
+</script>
   <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-sky-400 via-blue-500 to-blue-200 animate-gradient-x">
     <div class="bg-white/90 p-8 rounded-2xl shadow-2xl w-full max-w-sm flex flex-col items-center animate-fade-in-up">
       <h2 class="mb-6 text-2xl font-extrabold text-blue-700 tracking-wide animate-fade-in">User Login</h2>

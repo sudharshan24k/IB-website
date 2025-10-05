@@ -50,6 +50,9 @@
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="css/page-transition.css">
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#0a192f">
     <style>
                 /* Stylish hero headline */
                 .hero-headline {
@@ -441,4 +444,17 @@
 </body>
 <script src="js/page-transition.js"></script>
 </html>
+<script>
+    // Register service worker for PWA
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(function(registration) {
+                    // Registration successful
+                }, function(err) {
+                    // Registration failed
+                });
+        });
+    }
+</script>
 <!-- Public page: no secure route needed here. -->
