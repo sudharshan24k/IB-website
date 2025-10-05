@@ -196,6 +196,19 @@
     <input type="hidden" name="redirect" value="https://web3forms.com/success">
     <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:from-blue-600 hover:to-sky-500 hover:scale-105 transition-all duration-300 submit-button-hover">Send Message</button>
   </form>
+  <script>
+    // Clear the form after POST submission and redirect
+    document.addEventListener('DOMContentLoaded', function() {
+      var form = document.querySelector('form[action="https://api.web3forms.com/submit"]');
+      if (form) {
+        form.addEventListener('submit', function() {
+          setTimeout(function() {
+            form.reset();
+          }, 1000); // 1s delay to allow POST to go through
+        });
+      }
+    });
+  </script>
       </div>
       <!-- Contact Information -->
       <div class="flex flex-col gap-8 justify-center" data-aos="fade-left">
