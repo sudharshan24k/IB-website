@@ -169,7 +169,7 @@
       <!-- Contact Form -->
       <div class="bg-gradient-to-br from-sky-50 via-blue-100 to-white rounded-3xl shadow-2xl p-10 border-2 border-sky-200 flex flex-col justify-center" data-aos="fade-up">
         <h2 class="text-3xl font-bold text-sky-800 mb-6">Send Us a Message</h2>
-  <form id="contactForm" class="space-y-6">
+  <form class="space-y-6" action="https://api.web3forms.com/submit" method="POST">
     <input type="hidden" name="access_key" value="0403ca38-dd49-49c3-b97f-5d71d8933554">
     <div class="grid md:grid-cols-2 gap-6">
       <div>
@@ -178,7 +178,7 @@
       </div>
       <div>
         <label for="phone" class="block text-sm font-medium text-sky-700 mb-2">Phone</label>
-        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow transition-all duration-300 input-focus-effect" placeholder="+91 9876543210">
+        <input type="tel" id="phone" name="phone" class="w-full px-4 py-2 rounded-xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow transition-all duration-300 input-focus-effect" placeholder="+91-9876543210">
       </div>
     </div>
     <div>
@@ -193,9 +193,9 @@
       <label for="message" class="block text-sm font-medium text-sky-700 mb-2">Message</label>
       <textarea id="message" name="message" required rows="5" class="w-full px-4 py-2 rounded-xl border border-sky-200 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow transition-all duration-300 input-focus-effect" placeholder="Your message"></textarea>
     </div>
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
     <button type="submit" class="w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-xl font-semibold shadow-lg hover:from-blue-600 hover:to-sky-500 hover:scale-105 transition-all duration-300 submit-button-hover">Send Message</button>
   </form>
-  <div id="form-feedback" class="hidden mb-6 text-center"></div>
       </div>
       <!-- Contact Information -->
       <div class="flex flex-col gap-8 justify-center" data-aos="fade-left">
