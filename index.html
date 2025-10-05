@@ -142,24 +142,64 @@
     <!-- Header Section -->
     <div id="header"></div>
     <script>
-        // Fetch and inject header
-        fetch('header.html')
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById('header').innerHTML = data;
-            // Attach mobile menu toggle logic
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenuBtn && mobileMenu) {
-              mobileMenuBtn.addEventListener('click', function() {
-                if (mobileMenu.style.display === 'block') {
-                  mobileMenu.style.display = 'none';
-                } else {
-                  mobileMenu.style.display = 'block';
-                }
-              });
-            }
-          });
+                        // Fetch and inject header, then highlight active nav after DOM update
+                                function highlightActiveNav() {
+                                    var path = window.location.pathname.split('/').pop() || 'index.html';
+                                    // Desktop nav
+                                    document.querySelectorAll('nav[aria-label="Main Navigation"] a').forEach(function(link) {
+                                        if (link.getAttribute('href') === path) {
+                                            link.classList.add('active-nav');
+                                            link.style.background = '#e0f2fe';
+                                            link.style.color = '#0c4a6e';
+                                            link.style.borderRadius = '0.5rem';
+                                            link.style.fontWeight = 'bold';
+                                            link.style.paddingLeft = '0.75rem';
+                                            link.style.paddingRight = '0.75rem';
+                                            link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
+                                        }
+                                    });
+                                    // Mobile nav
+                                    var mobileMenu = document.getElementById('mobile-menu');
+                                    if (mobileMenu) {
+                                        mobileMenu.querySelectorAll('a').forEach(function(link) {
+                                            if (link.getAttribute('href') === path) {
+                                                link.classList.add('active-nav');
+                                                link.style.background = '#e0f2fe';
+                                                link.style.color = '#0c4a6e';
+                                                link.style.borderRadius = '0.5rem';
+                                                link.style.fontWeight = 'bold';
+                                                link.style.paddingLeft = '0.75rem';
+                                                link.style.paddingRight = '0.75rem';
+                                                link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
+                                            }
+                                        });
+                                    }
+                                }
+
+                                fetch('header.html')
+                                    .then(res => res.text())
+                                    .then(data => {
+                                        document.getElementById('header').innerHTML = data;
+                                        // Attach mobile menu toggle logic
+                                        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                                        const mobileMenu = document.getElementById('mobile-menu');
+                                        if (mobileMenuBtn && mobileMenu) {
+                                            mobileMenuBtn.addEventListener('click', function() {
+                                                if (mobileMenu.style.display === 'block') {
+                                                    mobileMenu.style.display = 'none';
+                                                } else {
+                                                    mobileMenu.style.display = 'block';
+                                                }
+                                            });
+                                        }
+                                        // Use MutationObserver to highlight nav as soon as it's present
+                                        const observer = new MutationObserver(function() {
+                                            highlightActiveNav();
+                                        });
+                                        observer.observe(document.getElementById('header'), { childList: true, subtree: true });
+                                        // Also call once in case it's already ready
+                                        setTimeout(highlightActiveNav, 100);
+                                    });
     </script>
 
     <!-- Hero Section -->

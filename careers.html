@@ -170,7 +170,51 @@
     <script>
         fetch('header.html')
             .then(res => res.text())
-            .then(data => { document.getElementById('header').innerHTML = data; });
+                    .then(data => {
+                            document.getElementById('header').innerHTML = data;
+                            // Attach mobile menu toggle logic
+                            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                            const mobileMenu = document.getElementById('mobile-menu');
+                            if (mobileMenuBtn && mobileMenu) {
+                                    mobileMenuBtn.addEventListener('click', function() {
+                                            if (mobileMenu.style.display === 'block') {
+                                                    mobileMenu.style.display = 'none';
+                                            } else {
+                                                    mobileMenu.style.display = 'block';
+                                            }
+                                    });
+                            }
+                            // Highlight active nav link (desktop and mobile)
+                            var path = window.location.pathname.split('/').pop() || 'index.html';
+                            // Desktop nav
+                            document.querySelectorAll('nav[aria-label="Main Navigation"] a').forEach(function(link) {
+                                if (link.getAttribute('href') === path) {
+                                    link.classList.add('active-nav');
+                                    link.style.background = '#e0f2fe';
+                                    link.style.color = '#0c4a6e';
+                                    link.style.borderRadius = '0.5rem';
+                                    link.style.fontWeight = 'bold';
+                                    link.style.paddingLeft = '0.75rem';
+                                    link.style.paddingRight = '0.75rem';
+                                    link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
+                                }
+                            });
+                            // Mobile nav
+                            if (mobileMenu) {
+                                mobileMenu.querySelectorAll('a').forEach(function(link) {
+                                    if (link.getAttribute('href') === path) {
+                                        link.classList.add('active-nav');
+                                        link.style.background = '#e0f2fe';
+                                        link.style.color = '#0c4a6e';
+                                        link.style.borderRadius = '0.5rem';
+                                        link.style.fontWeight = 'bold';
+                                        link.style.paddingLeft = '0.75rem';
+                                        link.style.paddingRight = '0.75rem';
+                                        link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
+                                    }
+                                });
+                            }
+                    });
     </script>
 
     <!-- Careers Section -->

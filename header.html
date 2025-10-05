@@ -1,29 +1,59 @@
 </header>
 <script>
-// Highlight active nav link (desktop and mobile)
-document.addEventListener('DOMContentLoaded', function() {
-  var path = window.location.pathname.split('/').pop() || 'index.html';
-  // Desktop nav
-  document.querySelectorAll('nav[aria-label="Main Navigation"] a').forEach(function(link) {
-    if (link.getAttribute('href') === path) {
-      link.classList.add('!text-blue-700', 'font-bold', 'active-nav');
-    }
-  });
-  // Mobile nav
-  var mobileNav = document.getElementById('mobile-menu');
-  if (mobileNav) {
-    mobileNav.querySelectorAll('a').forEach(function(link) {
+// Highlight active nav link (desktop and mobile) after header is loaded
+(function() {
+  function highlightActiveNav() {
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    // Desktop nav
+    document.querySelectorAll('nav[aria-label="Main Navigation"] a').forEach(function(link) {
       if (link.getAttribute('href') === path) {
-        link.classList.add('!text-blue-700', 'font-bold', 'active-nav');
+        link.classList.add('active-nav');
+        link.style.background = '#e0f2fe';
+        link.style.color = '#0c4a6e';
+        link.style.borderRadius = '0.5rem';
+        link.style.fontWeight = 'bold';
+        link.style.paddingLeft = '0.75rem';
+        link.style.paddingRight = '0.75rem';
+        link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
       }
     });
+    // Mobile nav
+    var mobileMenu = document.getElementById('mobile-menu');
+    if (mobileMenu) {
+      mobileMenu.querySelectorAll('a').forEach(function(link) {
+        if (link.getAttribute('href') === path) {
+          link.classList.add('active-nav');
+          link.style.background = '#e0f2fe';
+          link.style.color = '#0c4a6e';
+          link.style.borderRadius = '0.5rem';
+          link.style.fontWeight = 'bold';
+          link.style.paddingLeft = '0.75rem';
+          link.style.paddingRight = '0.75rem';
+          link.style.boxShadow = '0 2px 8px 0 rgba(56,189,248,0.08)';
+        }
+      });
+    }
   }
-});
+  // Run after a short delay to ensure DOM is ready
+  setTimeout(highlightActiveNav, 50);
+})();
 </script>
 <!-- header.html: Reusable Header for Edura Global Solutions -->
 <!-- Tailwind CSS CDN should be included in the main HTML file -->
 
 <style>
+  /* Highlight for current page nav link */
+  .active-nav {
+    background: #e0f2fe !important;
+    border-radius: 0.5rem;
+    color: #0c4a6e !important;
+    box-shadow: 0 2px 8px 0 rgba(56,189,248,0.08);
+    position: relative;
+    z-index: 1;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    transition: background 0.3s, color 0.3s;
+  }
   /* Header Styling */
   header {
     background: linear-gradient(to right, #e0f7fa, #b3e5fc, #ffffff);

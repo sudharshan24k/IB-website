@@ -1,9 +1,32 @@
 // contact-api.js
-// Handles EmailJS integration for contact form
+// Handles Web3Forms AJAX integration for contact form
 
 document.addEventListener('DOMContentLoaded', function() {
-  if(window.emailjs) {
-    emailjs.init('vxNeWnufyxNPUcNTy');
+  // Web3Forms AJAX handler
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const object = {};
+      formData.forEach((value, key) => { object[key] = value });
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(object)
+        });
+        const result = await response.json();
+        if (result.success) {
+          showFormFeedback('success', 'Thank you! Your message has been sent.');
+          form.reset();
+        } else {
+          showFormFeedback('error', 'Oops! Something went wrong.');
+        }
+      } catch (err) {
+        showFormFeedback('error', 'Network error. Please try again.');
+      }
+    });
   }
 });
 
@@ -25,23 +48,5 @@ function showFormFeedback(type, message) {
   setTimeout(() => {
     feedback.classList.add('hidden');
     feedback.innerHTML = '';
-  }, 4000);
-}
-
-function sendEmailJS(e) {
-  e.preventDefault();
-  const form = e.target;
-  emailjs.send('Gmail-globaledura', 'template_553aqm9', {
-    user_name: form.name.value,
-    user_email: form.email.value,
-    user_phone: form.phone.value,
-    subject: form.subject.value,
-    message: form.message.value
-  })
-  .then(function(response) {
-    showFormFeedback('success', 'Thank you! Your message has been sent.');
-    form.reset();
-  }, function(error) {
-    showFormFeedback('error', 'Sorry, there was an error sending your message. Please try again later.');
-  });
+  }, 3000);
 }
